@@ -550,3 +550,252 @@ How to reduce S3 list operations?
 What are S3 scalability boundaries?
 
 What is the future evolution of S3?
+
+
+1️⃣ Deep Internal Behavior
+
+What internal mechanisms prevent split-brain scenarios in S3 metadata?
+
+How does S3 rebalance partitions when a prefix becomes hot?
+
+What is the failure domain of an S3 object?
+
+Can S3 lose metadata while preserving object data?
+
+How does S3 handle corrupted blocks internally?
+
+How are object checksums stored and verified?
+
+What happens if multipart upload is never completed?
+
+Why does S3 not support atomic rename?
+
+Why is S3 not POSIX compliant?
+
+How does S3 garbage collect incomplete uploads?
+
+2️⃣ Object Design & Naming Strategy
+
+How would you design object keys for:
+
+Billions per day
+
+High read after write
+
+Time-series IoT data
+
+Why can sequential timestamps cause uneven load?
+
+How do you design sharding strategy in S3?
+
+Should UUID be prefix or suffix?
+
+How do you avoid excessive LIST operations?
+
+How do you simulate folder hierarchy efficiently?
+
+When does object metadata size become a problem?
+
+What is the max metadata size?
+
+What happens if you frequently overwrite same object?
+
+Why is S3 not good for transactional updates?
+
+3️⃣ Extreme Cost Engineering
+
+How do you redesign architecture if PUT cost exceeds storage cost?
+
+When do request charges dominate S3 bill?
+
+How does Intelligent Tiering monitoring fee impact small objects?
+
+Why are Glacier retrievals dangerous for unpredictable access?
+
+How do you calculate total cost of replication?
+
+How to redesign ingestion to reduce request cost by 90%?
+
+When is batching uploads critical?
+
+How does S3 inventory reduce cost?
+
+Why is compressing small JSON often useless?
+
+How to redesign IoT ingestion without IoT Core but still low cost?
+
+4️⃣ Consistency & Concurrency Edge Cases
+
+What race conditions can still occur in S3?
+
+How do you implement optimistic locking in S3?
+
+What is ETag and when is it unreliable?
+
+How do you detect object overwrite conflicts?
+
+Can S3 return stale data?
+
+How does versioning impact concurrency?
+
+What happens when replication and versioning interact?
+
+Can two clients upload same key simultaneously?
+
+How do you design idempotent upload APIs?
+
+How do you simulate atomic updates in S3?
+
+5️⃣ Security Edge Cases
+
+How does S3 behave if KMS is unavailable?
+
+What happens when KMS throttles heavily?
+
+Can an IAM deny override bucket allow?
+
+What happens if bucket policy and IAM conflict?
+
+How does S3 Block Public Access override explicit allow?
+
+How to prevent lateral movement using S3?
+
+How to detect data exfiltration through S3?
+
+How to design S3 isolation for hostile tenants?
+
+What are risks of presigned URLs?
+
+How to prevent replay attacks on presigned URLs?
+
+6️⃣ Compliance & Governance Traps
+
+Can lifecycle rule delete data under compliance mode?
+
+What happens if retention period is misconfigured?
+
+How to guarantee legal hold enforcement?
+
+How to audit 7-year immutable storage?
+
+What is impact of versioning on GDPR deletion?
+
+How to design “right to erasure” with versioning enabled?
+
+How to guarantee no admin can delete object?
+
+How to protect against root account deletion?
+
+How to prove immutability legally?
+
+How does S3 Object Lock differ from Glacier Vault Lock?
+
+7️⃣ Replication & DR Edge Scenarios
+
+What happens if replication role loses permission?
+
+What if replication destination bucket is deleted?
+
+Can replication create infinite loops?
+
+What happens if replication is paused?
+
+How to detect replication backlog?
+
+Can you guarantee < 5 minute RPO?
+
+What are replication consistency guarantees?
+
+Can replication copy delete markers?
+
+How to design multi-region active-active?
+
+How to handle replication with KMS encryption cross-region?
+
+8️⃣ High-Scale Real Scenarios
+
+100K devices uploading every 10 seconds — what breaks first?
+
+1 billion objects per day — what is metadata overhead?
+
+10PB data lake — what becomes bottleneck?
+
+10 million Lambda triggers per hour — what fails?
+
+Global SaaS with 200 tenants — bucket per tenant or prefix?
+
+How to prevent noisy neighbor in S3 multi-tenant?
+
+Can S3 be rate limited per user?
+
+How to throttle abusive clients?
+
+How to prevent brute-force key scanning?
+
+What happens if someone lists bucket continuously?
+
+9️⃣ Advanced Integration Questions
+
+S3 vs Kafka for ingestion?
+
+S3 vs DynamoDB for logs?
+
+S3 vs EFS for shared file storage?
+
+S3 vs CloudFront for video streaming?
+
+How to design event-sourcing using S3?
+
+Can S3 be primary source of truth?
+
+How to use S3 as append-only log?
+
+How to build CDN-backed secure file sharing?
+
+How to build signed URL system at scale?
+
+How to integrate S3 with Kinesis pipeline?
+
+🔟 Interviewer Trap Questions
+
+Is S3 truly infinite?
+
+Can S3 be used for OLTP workloads?
+
+What are S3 performance limits per prefix?
+
+What is the smallest billable object?
+
+What is the largest request charge impact?
+
+What is S3’s weakest architectural limitation?
+
+Why is S3 bad for millions of tiny updates?
+
+What hidden cost surprises people?
+
+What is the biggest real production mistake teams make?
+
+If S3 region fails, what exactly happens?
+
+⚡ CTO-Level Brain Burner Questions
+
+Design S3 architecture for global cold-chain IoT platform with 500K devices.
+
+How to reduce S3 cost by 70% without losing durability?
+
+How to design S3 for ransomware-proof compliance storage?
+
+What architecture would replace S3 if cost doubles?
+
+How to design object storage system like S3?
+
+What are theoretical limits of object storage?
+
+How would you build your own S3?
+
+How does S3 differ from Google Cloud Storage internally?
+
+Can S3 be made strongly consistent globally?
+
+What is future evolution of S3 architecture?
