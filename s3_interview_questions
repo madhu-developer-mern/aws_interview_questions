@@ -1,0 +1,552 @@
+1. Core Architecture & Internals
+
+Explain how Amazon S3 achieves 11 9’s durability internally.
+
+What is the difference between durability and availability in S3?
+
+How does S3 handle data replication across Availability Zones?
+
+Explain how S3 stores objects internally (key, metadata, storage nodes).
+
+What happens internally when you upload a 5TB file?
+
+How does S3 ensure data integrity during upload?
+
+Explain the internal working of multipart upload.
+
+What are S3 request rate limits? Are there still prefix limitations?
+
+How does S3 handle hot partitions?
+
+What is strong consistency in S3? When was it introduced?
+
+2. Storage Classes Deep Dive
+
+Compare:
+
+S3 Standard
+
+S3 Standard-IA
+
+S3 One Zone-IA
+
+S3 Intelligent-Tiering
+
+S3 Glacier Instant Retrieval
+
+S3 Glacier Flexible Retrieval
+
+S3 Glacier Deep Archive
+
+When would you NOT use Intelligent Tiering?
+
+Explain retrieval time differences between Glacier tiers.
+
+How do you design lifecycle policies for 100TB+ cold-chain IoT data?
+
+Cost optimization strategy for millions of small files?
+
+3. Security & Access Control (Architect Level)
+
+Explain the difference between:
+
+Bucket Policy
+
+IAM Policy
+
+ACL
+
+Access Points
+
+VPC Endpoints
+
+How does S3 evaluate access (policy evaluation order)?
+
+What is Block Public Access? How does it override policies?
+
+How would you design multi-tenant secure access using S3?
+
+Explain cross-account access to S3 securely.
+
+How do you restrict S3 access to specific VPCs only?
+
+What is S3 Access Analyzer?
+
+How does S3 Object Ownership work?
+
+Difference between SSE-S3, SSE-KMS, SSE-C.
+
+How does KMS throttling affect S3 performance?
+
+4. Performance & Scalability
+
+How do you optimize S3 performance for high TPS workloads?
+
+How to design S3 for 10K writes per second?
+
+How do you reduce latency for global users?
+
+Compare:
+
+S3 + CloudFront
+
+Multi-region S3 replication
+
+What is Transfer Acceleration?
+
+How does S3 handle eventual consistency (historically)?
+
+How would you design real-time IoT ingestion directly to S3 without IoT Core?
+
+5. Data Management & Governance
+
+What is S3 Versioning? Internal behavior?
+
+What happens when you delete a versioned object?
+
+What is MFA delete?
+
+Explain Object Lock:
+
+Governance mode
+
+Compliance mode
+
+What is legal hold?
+
+How does S3 replication work?
+
+What is Replication Time Control (RTC)?
+
+Can you replicate encrypted objects?
+
+What is S3 Inventory?
+
+How do you track millions of objects efficiently?
+
+6. Event-Driven Architecture
+
+Explain S3 event notifications.
+
+Compare:
+
+S3 → Lambda
+
+S3 → SQS
+
+S3 → SNS
+
+What are common pitfalls of S3 triggers?
+
+How to prevent infinite trigger loops?
+
+Design a PDF report generation system using S3 events.
+
+How do you handle idempotency in S3-triggered Lambda?
+
+7. Networking & Hybrid
+
+What is an S3 Gateway Endpoint?
+
+What is an Interface Endpoint?
+
+How does PrivateLink work with S3?
+
+How to access S3 from on-prem securely?
+
+Can S3 exist inside a VPC?
+
+What is the difference between public endpoint and VPC endpoint access?
+
+8. Big Data & Analytics
+
+How does S3 integrate with:
+
+Athena
+
+EMR
+
+Glue
+
+What file format is optimal for analytics in S3?
+
+Compare:
+
+JSON
+
+CSV
+
+Parquet
+
+ORC
+
+How do you partition S3 data for Athena?
+
+How to handle small file problem in S3?
+
+Explain S3 Select.
+
+What is the difference between S3 and EFS for analytics workloads?
+
+9. Monitoring & Troubleshooting
+
+What are S3 request metrics?
+
+How to troubleshoot 403 Access Denied?
+
+How to debug KMS access issues with S3?
+
+What is CloudTrail logging for S3?
+
+Difference between Server Access Logs and CloudTrail?
+
+What is Storage Lens?
+
+How to analyze S3 cost spikes?
+
+10. Disaster Recovery & Multi-Region
+
+How do you design multi-region DR using S3?
+
+What is Cross-Region Replication (CRR)?
+
+Difference between SRR and CRR?
+
+What are replication prerequisites?
+
+Can replication be bidirectional?
+
+How to avoid replication loops?
+
+11. Real Architect Scenarios
+
+You have 5000 IoT devices sending 1 record per minute. Design S3 ingestion cost-optimized.
+
+Your S3 bill suddenly increased 3x. How do you analyze?
+
+Customer needs WORM storage for 7 years. How do you design?
+
+Need ultra-low latency file access globally. Design architecture.
+
+How do you migrate 200TB from on-prem NAS to S3?
+
+How to secure S3 for GDPR compliance?
+
+How to design S3 data lake for ML workloads?
+
+🚀 Scenario-Based Questions (Very Advanced)
+
+Can S3 be used as a database?
+
+How would you implement row-level access control in S3?
+
+What are S3 limitations?
+
+Why is S3 not suitable for low-latency transactional workloads?
+
+How do you design object naming strategy for billions of objects?
+
+What happens if a region goes down?
+
+Explain how S3 pricing works in detail.
+
+How would you reduce PUT costs drastically?
+
+How do you secure S3 from ransomware?
+
+Can you make S3 strongly consistent across regions?
+
+
+
+
+1️⃣ Architecture & Internal Mechanics
+
+How does S3 physically store objects across Availability Zones?
+
+How does S3 maintain 99.999999999% durability?
+
+What internal failures can still cause data loss?
+
+What happens internally during PUT, GET, DELETE?
+
+Explain S3’s consistency model evolution.
+
+What changed after S3 introduced strong consistency?
+
+What is S3’s metadata service architecture?
+
+How does S3 scale to trillions of objects?
+
+What is the partitioning mechanism in S3?
+
+How do prefix designs impact performance today?
+
+What is the maximum object size and why?
+
+How does S3 handle checksum validation?
+
+How does S3 handle partial failures during multipart upload?
+
+What is the internal difference between small object and large object handling?
+
+Why is S3 not suitable for high-frequency overwrite workloads?
+
+2️⃣ Performance & Scalability
+
+How would you design S3 for 50K writes per second?
+
+How to prevent request throttling in S3?
+
+How do you detect and fix hot partitions?
+
+How does S3 handle burst traffic?
+
+How would you optimize S3 for large object streaming?
+
+What are best practices for object key naming at scale?
+
+How to optimize S3 for millions of small files?
+
+What is the small file problem in S3?
+
+How do you design S3 for ultra-low latency?
+
+S3 vs EFS vs EBS — real production trade-offs?
+
+How to benchmark S3 throughput?
+
+How does KMS encryption affect performance?
+
+How do you scale S3 event-driven pipelines?
+
+3️⃣ Cost Engineering (Very Important in Real Interviews)
+
+Explain full S3 pricing model.
+
+How to reduce S3 PUT cost drastically?
+
+How to reduce S3 LIST request cost?
+
+Why do small files increase cost?
+
+How to optimize lifecycle policies for 100TB data lake?
+
+How does Intelligent Tiering actually work?
+
+When NOT to use Intelligent Tiering?
+
+Glacier retrieval cost trade-offs?
+
+How do you monitor S3 cost anomalies?
+
+How to redesign architecture when S3 bill increases 3x?
+
+Compare S3 + CloudFront vs S3 direct access cost.
+
+How do replication costs accumulate?
+
+How do cross-region data transfer charges apply?
+
+How to reduce S3 analytics cost?
+
+How do S3 request charges impact IoT workloads?
+
+4️⃣ Security & Compliance
+
+Explain S3 policy evaluation logic step-by-step.
+
+How does Block Public Access override policies?
+
+Difference between bucket policy and IAM policy?
+
+How to secure S3 for multi-tenant SaaS?
+
+How to design row-level isolation in S3?
+
+How to restrict S3 access to specific VPCs only?
+
+How to implement cross-account secure sharing?
+
+What is Object Ownership and why it matters?
+
+SSE-S3 vs SSE-KMS vs SSE-C trade-offs?
+
+What are KMS throttling risks?
+
+How to design S3 for HIPAA compliance?
+
+How to design S3 for GDPR right-to-erasure?
+
+How to prevent ransomware on S3?
+
+How does Object Lock protect data?
+
+Governance vs Compliance mode?
+
+What is MFA delete?
+
+How to audit S3 access?
+
+Difference between CloudTrail and Server Access Logs?
+
+How to detect malicious object uploads?
+
+How to prevent accidental public exposure?
+
+5️⃣ Data Management & Lifecycle
+
+How does versioning work internally?
+
+What happens when you delete versioned object?
+
+How does replication handle delete markers?
+
+How to design lifecycle for IoT raw data?
+
+How to transition 1PB to Glacier safely?
+
+What is replication time control?
+
+Can encrypted objects be replicated?
+
+What are replication failure scenarios?
+
+How to handle replication lag?
+
+How to manage billions of objects efficiently?
+
+What is S3 Inventory?
+
+How to track orphaned objects?
+
+How to design archival strategy for 7-year retention?
+
+6️⃣ Event-Driven & Serverless Integration
+
+How does S3 event notification system work internally?
+
+S3 → Lambda failure handling?
+
+How to design idempotent S3-triggered workflows?
+
+How to avoid infinite loops?
+
+What are S3 event ordering guarantees?
+
+How to process high-volume S3 events?
+
+S3 vs Kinesis for event processing?
+
+How to design large-scale PDF generation using S3 events?
+
+How to retry failed S3-triggered jobs?
+
+What are S3 event duplication scenarios?
+
+7️⃣ Networking & Hybrid Access
+
+Can S3 exist inside a VPC?
+
+What is S3 Gateway Endpoint?
+
+Interface Endpoint vs Gateway Endpoint?
+
+How to restrict S3 access to private network only?
+
+How does S3 Transfer Acceleration work?
+
+How to migrate 500TB from on-prem to S3?
+
+Direct Connect vs VPN for S3?
+
+Multi-region access patterns?
+
+How to serve global users with minimal latency?
+
+What happens if region goes down?
+
+8️⃣ Big Data & Analytics
+
+How to design S3 data lake for ML?
+
+Partitioning strategy for Athena?
+
+JSON vs Parquet trade-offs?
+
+How to handle schema evolution?
+
+How to optimize Athena query cost?
+
+How to fix small file issue in data lake?
+
+What is S3 Select?
+
+S3 vs HDFS?
+
+How to design real-time + batch analytics pipeline?
+
+How to handle corrupted objects in data lake?
+
+9️⃣ Troubleshooting & Production Firefighting
+
+How to debug 403 Access Denied?
+
+How to debug KMS permission issues?
+
+Why are uploads failing intermittently?
+
+Why is replication delayed?
+
+Why are lifecycle rules not triggering?
+
+Why are S3 events not firing?
+
+How to debug slow downloads?
+
+How to trace cross-account access issue?
+
+How to investigate sudden cost spike?
+
+How to detect accidental mass deletion?
+
+🔟 Extreme Real-World Scenarios
+
+10,000 IoT devices sending data every minute — design cost-optimized S3 ingestion.
+
+1PB archive with 7-year WORM compliance — design solution.
+
+Customer wants immutable logs — design.
+
+Need global active-active file access — design.
+
+How to implement secure file sharing platform using S3?
+
+How to implement expiring download links?
+
+How to handle billions of objects per day?
+
+How to migrate from on-prem NAS to S3 without downtime?
+
+How to protect S3 from insider threats?
+
+How to implement ransomware detection?
+
+Can S3 be used as a database?
+
+What are S3 architectural limitations?
+
+How to design multi-region DR with RPO < 15 min?
+
+How to reduce object metadata overhead?
+
+How to design S3 for high-frequency updates?
+
+How to enforce strict naming conventions?
+
+How to detect duplicate object uploads?
+
+How to reduce S3 list operations?
+
+What are S3 scalability boundaries?
+
+What is the future evolution of S3?
