@@ -1,0 +1,1174 @@
+Explain the full lifecycle of an EC2 instance from launch to termination.
+
+What happens internally when you click “Launch Instance”?
+
+Difference between AMI, Snapshot, and EBS Volume.
+
+How does EC2 achieve multi-tenancy isolation?
+
+Explain Nitro System architecture.
+
+How does AWS provide hardware-level isolation?
+
+What is ENI and how does it work internally?
+
+What happens when you stop vs terminate an instance?
+
+Explain instance metadata service (IMDSv1 vs IMDSv2).
+
+How does EC2 placement work inside an Availability Zone?
+
+🔹 Networking Deep Dive
+
+Explain how public IP mapping works internally.
+
+Difference between Elastic IP and Public IP.
+
+How does EC2 communicate within same VPC?
+
+Explain packet flow from internet to EC2.
+
+How does security group evaluation work?
+
+Difference between NACL and Security Group.
+
+Explain asymmetric routing problem in AWS.
+
+What happens if two VPCs have overlapping CIDR?
+
+How do you troubleshoot EC2 network connectivity issues?
+
+How does AWS prevent IP spoofing?
+
+🔹 Scaling & High Availability
+
+Design EC2 architecture for 10 million users.
+
+How does Auto Scaling Group decide scale-in/out?
+
+What happens during instance replacement in ASG?
+
+How to achieve zero-downtime deployment using EC2?
+
+Difference between Launch Template and Launch Configuration.
+
+Explain rolling update vs blue-green deployment.
+
+What is instance warm pool?
+
+How do you handle sudden traffic spike?
+
+What happens if AZ fails?
+
+How do you design multi-region EC2 architecture?
+
+🔹 Storage Deep Dive
+
+Difference between EBS, Instance Store, and EFS.
+
+How does EBS replication work?
+
+What happens to EBS when instance terminates?
+
+How do you resize EBS volume?
+
+Explain gp2 vs gp3 vs io1 vs io2.
+
+How to design high IOPS workload?
+
+How to encrypt EBS properly?
+
+What is EBS multi-attach?
+
+How to migrate EC2 storage with minimal downtime?
+
+Explain EBS snapshot consistency.
+
+🔹 Security & Compliance
+
+How do you secure SSH access to EC2?
+
+How to eliminate SSH completely?
+
+Explain IAM role vs instance profile.
+
+How does EC2 retrieve temporary credentials?
+
+How do you audit EC2 access?
+
+What is EC2 key pair mechanism?
+
+How to rotate SSH keys at scale?
+
+Explain host-based firewall vs security group.
+
+How to detect compromised EC2?
+
+How to harden EC2 OS for production?
+
+🔹 Performance & Optimization
+
+How do you choose instance type for workload?
+
+Difference between burstable and fixed performance instances.
+
+Explain CPU credit mechanism.
+
+How to benchmark EC2 performance?
+
+How to reduce latency in EC2 applications?
+
+How placement groups affect performance?
+
+Explain cluster placement group use case.
+
+What is spread placement group?
+
+How to tune EC2 for high throughput?
+
+How to monitor EC2 bottlenecks?
+
+🔹 Cost Optimization
+
+Difference between On-Demand, Reserved, Savings Plan, Spot.
+
+When should you use Spot instances?
+
+How to design cost-optimized EC2 architecture?
+
+How to reduce idle EC2 cost?
+
+How to monitor EC2 waste?
+
+Explain EC2 rightsizing strategy.
+
+How to implement auto shutdown?
+
+Explain capacity reservations.
+
+When to move workload from EC2 to serverless?
+
+How do you forecast EC2 cost growth?
+
+🔹 Disaster Recovery & Backup
+
+How to design EC2 DR strategy?
+
+Difference between pilot light and warm standby.
+
+How to replicate EC2 across regions?
+
+How to recover corrupted EBS volume?
+
+How to automate snapshot lifecycle?
+
+How to restore EC2 in different region?
+
+How to achieve RTO < 5 minutes?
+
+How to protect against accidental termination?
+
+Explain instance termination protection.
+
+How to recover deleted AMI?
+
+🔹 Advanced Real-Time Scenarios
+
+You have 5,000 instances; subnet IP exhausted. What next?
+
+You need to migrate 2,000 EC2 to new AMI version without downtime. How?
+
+SSH not working but instance running. Debug process?
+
+High CPU spike across ASG. How to investigate?
+
+EBS latency increased suddenly. Root cause approach?
+
+Spot instances terminated frequently. Solution?
+
+Security group accidentally opened to 0.0.0.0/0. Mitigation?
+
+AZ failure during peak traffic. Recovery steps?
+
+Instance reachable internally but not from internet. Debug?
+
+Instance cannot access S3 though IAM role attached. Diagnose?
+
+🔹 Hybrid & Enterprise
+
+How does EC2 integrate with Direct Connect?
+
+How to design hybrid network using EC2?
+
+How to implement centralized bastion architecture?
+
+How to enforce least privilege for EC2 fleet?
+
+How to isolate workloads in same account?
+
+How to handle compliance workloads?
+
+How to design EC2 for regulated industries?
+
+Explain EC2 in shared VPC architecture.
+
+How to manage EC2 across 100 AWS accounts?
+
+How to standardize EC2 deployments using Infrastructure as Code?
+
+🔹 Kubernetes & Containers Context
+
+How does EKS consume EC2 IPs?
+
+How to scale EC2 nodes for Kubernetes?
+
+What is ENI trunking?
+
+How to avoid IP exhaustion in EKS?
+
+When to use EC2 vs Fargate?
+
+🔹 Observability & Monitoring
+
+What EC2 metrics are critical in production?
+
+How does CloudWatch collect metrics?
+
+How to trace network packet loss?
+
+How to centralize EC2 logs?
+
+How to detect memory leak in EC2?
+
+🔹 Architecture & Design Thinking
+
+When should you NOT use EC2?
+
+How to decide between EC2, ECS, Lambda?
+
+How to design EC2 for ultra-low latency trading app?
+
+How to design EC2 for ML workloads?
+
+How to design for horizontal scalability?
+
+How to design for vertical scaling?
+
+How to prevent noisy neighbor problem?
+
+How to design EC2 for high-security workloads?
+
+How to handle instance fleet upgrades at scale?
+
+What are common EC2 anti-patterns?
+
+
+
+Large Scale SaaS Platform
+
+You are designing an EC2-based SaaS platform for 20 million users. How would you architect networking, scaling, and failure isolation?
+
+Traffic spikes 10x during marketing campaigns. How do you design EC2 scaling to absorb this without downtime?
+
+Your application requires 99.99% uptime. Design multi-AZ and multi-region EC2 architecture.
+
+You need blue-green deployment with zero downtime for 5,000 instances. How will you implement it?
+
+Your VPC is running out of IPs during peak scaling. What is your redesign approach?
+
+How would you design EC2 fleet across 3 regions with active-active traffic?
+
+You need to migrate 3,000 EC2 instances to a new hardened AMI. What rollout strategy do you use?
+
+Compliance requires isolation between customer workloads. How do you structure VPC and EC2?
+
+Design EC2 architecture for latency-sensitive trading application (<5ms requirement).
+
+You need to minimize blast radius between dev, staging, and prod. How do you isolate?
+
+🔹 Cost Optimization Scenario
+
+EC2 cost suddenly doubled month-over-month. How do you investigate?
+
+You have 1,000 instances underutilized (<10% CPU). What strategy would you apply?
+
+When would you migrate EC2 workloads to Spot?
+
+How do you design a mixed On-Demand + Spot fleet?
+
+How would you forecast EC2 cost for next 2 years?
+
+🔹 Security Case Study
+
+A production EC2 was compromised. What is your containment plan?
+
+SSH port was exposed to 0.0.0.0/0 for 6 months. What is your audit approach?
+
+You must eliminate SSH entirely from architecture. How do you redesign?
+
+How do you enforce IMDSv2 across entire EC2 fleet?
+
+How do you design least-privilege IAM for 2,000 instances?
+
+🔹 Disaster Recovery
+
+Entire AZ goes down. What happens to your EC2 fleet?
+
+How do you design RTO < 5 minutes for EC2?
+
+Your AMI pipeline was corrupted. How do you recover safely?
+
+How do you protect EC2 from accidental termination?
+
+Design cross-region failover for EC2-based app.
+
+🔹 Hybrid Enterprise Scenario
+
+You need to connect on-prem data center to EC2 securely. Design connectivity.
+
+Overlapping CIDR between VPC and on-prem. What now?
+
+100 AWS accounts, centralized EC2 governance required. How?
+
+How would you implement shared services VPC model?
+
+How do you isolate regulated workload inside same AWS account?
+
+🔷 PART 2: Troubleshooting-Only Deep Dive Round
+🔹 Networking Failures
+
+EC2 is running but not reachable via SSH. Debug steps?
+
+Instance reachable internally but not from internet. Why?
+
+Public IP attached but traffic not flowing. Possible causes?
+
+Intermittent packet loss between two EC2s in same subnet.
+
+EC2 cannot access S3 though IAM role attached.
+
+Private EC2 cannot access internet via NAT.
+
+Security group looks correct but traffic still blocked.
+
+High latency between EC2 instances in different AZs.
+
+Load balancer health check failing randomly.
+
+DNS resolution failing inside EC2.
+
+🔹 Performance Issues
+
+CPU spike across Auto Scaling Group.
+
+Memory leak suspected in EC2.
+
+Disk IOPS suddenly throttled.
+
+EBS latency increased drastically.
+
+Network throughput lower than expected.
+
+Instance performing slower after stop/start.
+
+Application freezing under moderate load.
+
+EC2 becoming unresponsive intermittently.
+
+High steal time in Linux EC2.
+
+How do you diagnose noisy neighbor issue?
+
+🔹 Scaling Problems
+
+Auto Scaling not scaling out despite high CPU.
+
+Instances launching but failing health checks.
+
+ASG replacing instances continuously.
+
+Spot instances terminated frequently.
+
+Subnet IP exhaustion during scale-out.
+
+Launch template update not applied.
+
+Rolling deployment caused partial outage.
+
+Mixed instance policy behaving unexpectedly.
+
+Warm pool instances not entering service.
+
+EC2 quota exceeded during peak event.
+
+🔹 Storage Failures
+
+Root volume full; instance not booting.
+
+Snapshot restore corrupted.
+
+EBS stuck in “attaching” state.
+
+Volume shows high burst balance exhaustion.
+
+File system corruption after reboot.
+
+Multi-attach volume causing data inconsistency.
+
+Instance store data lost after restart.
+
+Encrypted volume cannot attach.
+
+gp2 performance inconsistent.
+
+Application slow due to I/O wait.
+
+🔹 Security & Access
+
+IAM role attached but instance cannot access service.
+
+Instance metadata not accessible.
+
+Key pair lost; how to regain access?
+
+Bastion working but cannot SSH to private instance.
+
+Unexpected outbound traffic detected.
+
+EC2 flagged in GuardDuty.
+
+Instance suddenly inaccessible after security group change.
+
+RDP not working for Windows EC2.
+
+Time drift causing authentication failure.
+
+TLS certificate expired on EC2 service.
+
+🔹 Advanced Debugging
+
+Kernel panic during boot.
+
+EC2 stuck in “Initializing”.
+
+ENI detached unexpectedly.
+
+Traffic asymmetric after route table update.
+
+NAT Gateway data processing spike.
+
+High connection resets under load.
+
+Application works on one AZ but not another.
+
+Cross-region replication lag high.
+
+Instance unable to pull container image.
+
+Metadata service returning 401.
+
+
+Traffic & Scaling
+
+Your website response time increased suddenly during peak traffic. EC2 CPU is only 40%. What could be wrong?
+
+Auto Scaling is enabled but new instances are not coming into service. What would you check?
+
+Load balancer shows 502 errors intermittently. EC2 health check passes. What next?
+
+Instances are scaling out correctly, but users still experience slowness. Where do you investigate?
+
+During flash sale, EC2 fleet scaled but database crashed. What architectural mistake likely happened?
+
+You deployed new AMI, and 30% of instances failed. How do you roll back safely?
+
+Spot instances were terminated during business hours. How do you prevent service impact?
+
+ASG replaced all instances at once causing downtime. What configuration caused this?
+
+Subnet ran out of IPs during scale-out. How do you fix without downtime?
+
+CPU low but network throughput maxed. What instance-level limitation might be happening?
+
+🔹 Networking & Connectivity
+
+Instance has public IP but cannot access internet. Debug flow?
+
+Private EC2 cannot reach internet via NAT Gateway. What are common causes?
+
+Two instances in same subnet cannot talk to each other. Why?
+
+Instance reachable by IP but not by domain name.
+
+SSH suddenly stopped working on one instance only.
+
+After route table update, some instances lost connectivity.
+
+VPC peering established but traffic not flowing.
+
+Hybrid VPN connected but latency very high.
+
+Only one AZ having connectivity issues.
+
+Instance can ping but cannot access HTTP service.
+
+🔹 Security & Access Issues
+
+Security group looks correct but traffic still blocked.
+
+EC2 suddenly making outbound suspicious traffic.
+
+SSH port accidentally exposed to 0.0.0.0/0. Immediate actions?
+
+IAM role attached but application says AccessDenied.
+
+EC2 compromised. Containment steps?
+
+How do you investigate lateral movement between instances?
+
+Instance metadata service exploited. What could happen?
+
+You need emergency access but key pair is lost.
+
+Bastion works but private server unreachable.
+
+How do you audit who logged into EC2 last night?
+
+🔹 Storage & Disk Failures
+
+Instance stopped responding; disk 100% full.
+
+Application slow; high iowait observed.
+
+EBS burst balance exhausted; production impact.
+
+Snapshot restore instance not booting.
+
+Root volume corrupted after patch update.
+
+EBS stuck in “optimizing” state.
+
+File system read-only after crash.
+
+Volume detached accidentally from running instance.
+
+Disk encryption compliance failure detected.
+
+Need to migrate 2TB volume to larger size without downtime.
+
+🔹 Performance & Resource Bottlenecks
+
+CPU steal time observed. What does it indicate?
+
+Memory spike but no visible process consuming memory.
+
+High load average but low CPU usage.
+
+Application hanging randomly under moderate traffic.
+
+Kernel panic during reboot.
+
+Instance slow only at certain times of day.
+
+Network PPS limit reached.
+
+Placement group misconfiguration impact?
+
+Uneven traffic distribution across instances.
+
+Instance underperforming compared to same type in another AZ.
+
+🔹 Deployment & Release Problems
+
+New AMI deployed; app failing only in production.
+
+Rolling deployment caused partial outage.
+
+Blue-green switch caused session loss.
+
+Auto Scaling Group stuck in “Updating”.
+
+Launch template updated but instances using old config.
+
+Deployment script works manually but fails in ASG.
+
+Health check configuration wrong; cascading failure.
+
+Patch update caused instance reboot loop.
+
+Immutable deployment rollback strategy?
+
+Canary deployment fails in one AZ only.
+
+🔹 High Availability & DR
+
+One AZ down; traffic not shifting automatically.
+
+Multi-region failover DNS not switching.
+
+EC2 recovery option not triggering.
+
+Snapshot restore taking too long during DR.
+
+Elastic IP failover delay issue.
+
+Cross-region replication lag high.
+
+Warm standby not scaling properly.
+
+Pilot light DR design for EC2?
+
+RTO target missed during drill.
+
+How to test DR without affecting production?
+
+🔹 Cost & Governance
+
+EC2 bill unexpectedly doubled.
+
+Orphaned volumes consuming cost.
+
+Underutilized instances detected.
+
+Spot savings lower than expected.
+
+Instances running in wrong region.
+
+Unused Elastic IP charges increasing.
+
+Overprovisioned Auto Scaling baseline.
+
+Rightsizing analysis methodology?
+
+How to enforce tagging compliance?
+
+How to detect shadow EC2 deployments?
+
+🔹 Extreme Real-Life Debug
+
+EC2 running but console shows 2/2 checks failed.
+
+Instance stuck in “Terminating”.
+
+ENI cannot detach.
+
+Security group deleted accidentally.
+
+NACL rule misconfigured in production.
+
+VPC flow logs showing REJECT but SG allows.
+
+Instance loses connectivity after stop/start.
+
+IPv6 working but IPv4 failing.
+
+Application works locally but not on EC2.
+
+Time synchronization drift breaking authentication.
+
+🔹 Enterprise Architecture Thinking
+
+When should you NOT use EC2?
+
+When to migrate EC2 workload to ECS/EKS?
+
+How to isolate noisy tenant in multi-tenant EC2?
+
+How to scale 10k instances safely?
+
+How to handle IP exhaustion in EKS cluster?
+
+Shared services VPC model with EC2?
+
+Centralized logging for 5,000 EC2?
+
+EC2 fleet governance across 50 AWS accounts?
+
+How to eliminate manual EC2 launches?
+
+What are the biggest EC2 anti-patterns you’ve seen?
+
+
+🔷 AMI (Amazon Machine Image)
+
+What components are stored inside an AMI?
+
+Difference between Amazon-provided AMI and custom AMI?
+
+How does AMI differ from EBS snapshot?
+
+What happens internally when you create AMI from running instance?
+
+How does AMI versioning work in production pipelines?
+
+How to enforce hardened AMI usage across organization?
+
+Difference between HVM and PV AMIs?
+
+What is the impact of architecture mismatch (ARM vs x86)?
+
+How to share AMI across accounts securely?
+
+How to design immutable AMI deployment strategy?
+
+🔷 Instance Types
+
+How do you choose correct instance family?
+
+Difference between General Purpose, Compute Optimized, Memory Optimized?
+
+How do burstable instances (T family) work internally?
+
+What are CPU credits?
+
+When would you use Graviton instances?
+
+How do you benchmark instance performance?
+
+How does ENI limit vary per instance type?
+
+What is network performance baseline vs burst?
+
+When to use bare metal instances?
+
+What happens if you change instance type after launch?
+
+🔷 Storage Options
+
+Difference between EBS and Instance Store?
+
+What are EBS volume types?
+
+Difference between gp2 and gp3?
+
+What is provisioned IOPS?
+
+How does EBS encryption work?
+
+What is EBS multi-attach?
+
+What happens if root volume is deleted?
+
+How do you resize EBS without downtime?
+
+What is EBS optimized instance?
+
+How does snapshot incremental backup work?
+
+🔷 Networking Options
+
+What is ENI and how does secondary ENI work?
+
+Difference between public IP and Elastic IP?
+
+What is source/destination check?
+
+What is enhanced networking?
+
+How does placement group impact networking?
+
+What is cluster placement group?
+
+What is spread placement group?
+
+How does IPv6 work in EC2?
+
+How does EC2 communicate across AZs?
+
+How to attach multiple IPs to one instance?
+
+🔷 Security Options
+
+What is security group stateful behavior?
+
+Difference between SG and NACL?
+
+What is key pair mechanism?
+
+How does EC2 retrieve IAM role credentials?
+
+What is IMDSv2?
+
+How to disable IMDSv1?
+
+What is termination protection?
+
+How to protect EC2 from accidental deletion?
+
+What is instance metadata endpoint exposure risk?
+
+How to enforce least privilege IAM for EC2?
+
+🔷 Monitoring & Logging
+
+What EC2 metrics are available by default?
+
+What is detailed monitoring?
+
+Difference between basic and detailed monitoring?
+
+How does CloudWatch collect metrics?
+
+How to enable VPC Flow Logs?
+
+How to capture system logs of crashed EC2?
+
+What are status checks (1/2 vs 2/2)?
+
+How to monitor disk metrics?
+
+How to send application logs from EC2?
+
+What happens if CloudWatch agent fails?
+
+🔷 Auto Scaling & Launch Templates
+
+What is Launch Template?
+
+Difference between Launch Template and Launch Configuration?
+
+How does ASG scale based on metrics?
+
+What is target tracking scaling policy?
+
+What is step scaling?
+
+What is lifecycle hook?
+
+What is warm pool?
+
+How to update AMI in ASG safely?
+
+What happens during instance refresh?
+
+How to prevent all instances from terminating at once?
+
+🔷 Pricing & Purchase Options
+
+Difference between On-Demand, Reserved, Savings Plan?
+
+What is Spot instance?
+
+What is Spot interruption?
+
+How to handle Spot interruption gracefully?
+
+What is capacity reservation?
+
+What is dedicated host?
+
+Difference between dedicated instance and dedicated host?
+
+When should you use Spot Fleet?
+
+How to combine On-Demand and Spot in ASG?
+
+What are hidden EC2 costs people forget?
+
+🔷 Placement & High Availability
+
+What is placement group?
+
+When to use cluster placement group?
+
+When to use spread placement group?
+
+What is partition placement group?
+
+How to design EC2 for AZ failure?
+
+How does EC2 placement affect latency?
+
+What is capacity rebalance?
+
+What happens if AZ capacity exhausted?
+
+How to handle insufficient instance capacity error?
+
+How to design EC2 multi-region failover?
+
+🔷 Advanced Features
+
+What is EC2 hibernation?
+
+When should you use hibernation?
+
+How does Nitro Enclave work?
+
+What is Elastic Fabric Adapter?
+
+What is EC2 Auto Recovery?
+
+What is EC2 Fleet?
+
+How to attach GPU to EC2?
+
+What is Elastic Network Adapter (ENA)?
+
+What is instance lifecycle (pending → running → stopping etc.)?
+
+What happens during stop/start cycle internally?
+
+🔷 Operational Control & Governance
+
+How to prevent manual EC2 launch?
+
+How to enforce approved AMIs only?
+
+How to enforce tagging policies?
+
+How to audit EC2 across multiple accounts?
+
+How to detect unused EC2?
+
+How to restrict instance types?
+
+How to enforce IMDSv2 via SCP?
+
+How to block public IP assignment?
+
+How to prevent SSH key misuse?
+
+How to automate EC2 compliance checks?
+
+🔷 Real-World Edge Cases
+
+What happens if you detach primary ENI?
+
+What happens if you delete root volume?
+
+What if you launch ARM AMI on x86?
+
+What if subnet has no IP left?
+
+What happens if security group deleted?
+
+What if IAM role removed from instance?
+
+What happens if snapshot deleted but AMI exists?
+
+What if route table misconfigured?
+
+What if you change VPC DNS settings?
+
+What if CPU credit exhausted?
+
+Architecture & Design Thinking
+
+Design an EC2-based system that serves 50M users globally with <100ms latency.
+
+How do you decide between single large instances vs many small instances?
+
+When should you avoid EC2 and move to container/serverless?
+
+How do you design EC2 for multi-tenant SaaS isolation?
+
+How would you structure VPCs and subnets for enterprise-scale EC2 deployment?
+
+How do you prevent blast radius within same VPC?
+
+How do you design EC2 architecture for regulatory workloads?
+
+How would you plan CIDR for 5-year growth?
+
+How do you handle IP exhaustion in large-scale clusters?
+
+How do you design EC2 in active-active multi-region architecture?
+
+🔹 AMI Strategy (Enterprise Level)
+
+Describe your AMI baking pipeline for production.
+
+How do you enforce golden AMI compliance?
+
+How do you handle AMI vulnerabilities discovered post-deployment?
+
+How do you implement immutable infrastructure using AMIs?
+
+How do you share AMIs securely across 100 AWS accounts?
+
+How do you manage AMI lifecycle and cleanup?
+
+What risks exist if teams build AMIs manually?
+
+How do you prevent configuration drift?
+
+How do you roll back AMI at scale?
+
+How do you validate AMI before production promotion?
+
+🔹 Auto Scaling & Deployment Strategy
+
+How do you implement zero-downtime deployment across 3 AZs?
+
+What is your approach for instance refresh in large ASG?
+
+How do you prevent ASG cascading failures?
+
+How do you handle warm-up and health check timing issues?
+
+How do you scale based on custom metrics?
+
+How do you combine Spot and On-Demand safely?
+
+What happens when subnet IP capacity limits scaling?
+
+How do you handle uneven AZ scaling?
+
+How do you deploy 10,000 instances safely?
+
+How do you implement canary + blue-green at EC2 level?
+
+🔹 Networking & Deep Infrastructure
+
+Explain packet flow from internet to EC2 in detail.
+
+How does AWS map public IP to private IP internally?
+
+How do you troubleshoot asymmetric routing?
+
+What is the impact of ENI limits on scaling?
+
+How do you isolate network traffic between workloads?
+
+How does placement group affect latency?
+
+When do you use cluster vs partition placement group?
+
+How do you design EC2 for low-latency financial systems?
+
+How do you monitor PPS limits?
+
+How do you debug cross-AZ latency spikes?
+
+🔹 Storage & Performance
+
+How do you design high IOPS workloads on EC2?
+
+When would you choose io2 over gp3?
+
+How do you detect disk bottlenecks?
+
+What happens during EBS burst credit exhaustion?
+
+How do you design for large disk migrations without downtime?
+
+How do you ensure snapshot consistency?
+
+How do you design encrypted volume strategy?
+
+What risks exist with multi-attach volumes?
+
+How do you isolate noisy neighbor I/O issues?
+
+How do you benchmark instance storage performance?
+
+🔹 Security & Governance
+
+How do you eliminate SSH from architecture?
+
+How do you enforce IMDSv2 organization-wide?
+
+How do you detect compromised EC2 in real time?
+
+How do you enforce least privilege for thousands of instances?
+
+How do you audit user access to EC2?
+
+What controls prevent data exfiltration from EC2?
+
+How do you secure metadata endpoint?
+
+How do you prevent accidental public exposure?
+
+How do you rotate IAM role credentials safely?
+
+How do you implement OS-level hardening at scale?
+
+🔹 Failure & Troubleshooting Depth
+
+EC2 running but unreachable — step-by-step diagnosis?
+
+High CPU but low request rate — possible root causes?
+
+Load balancer healthy but users get errors — investigation path?
+
+Disk latency spikes randomly — what to check?
+
+ASG continuously replacing instances — why?
+
+Instance passes system check but fails status check — difference?
+
+Subnet route misconfiguration impact?
+
+Kernel panic after patch — recovery strategy?
+
+NAT data processing spike — root cause analysis?
+
+VPC flow logs show REJECT but SG allows — why?
+
+🔹 Cost & Capacity Engineering
+
+How do you design cost-efficient EC2 architecture?
+
+How do you forecast compute capacity growth?
+
+How do you implement rightsizing at scale?
+
+How do you prevent overprovisioning?
+
+When should you move to Graviton?
+
+How do you mix instance families safely?
+
+How do you handle regional capacity shortages?
+
+How do you use capacity reservations strategically?
+
+How do you minimize idle ASG baseline?
+
+How do you design spot-heavy fleet without instability?
+
+🔹 Enterprise Multi-Account Strategy
+
+How do you govern EC2 across 200 AWS accounts?
+
+How do you enforce tagging compliance?
+
+How do you centralize logging for thousands of instances?
+
+How do you block unapproved AMIs?
+
+How do you restrict instance types organization-wide?
+
+How do you enforce encryption by default?
+
+How do you prevent shadow EC2 deployments?
+
+How do you implement SCP controls for EC2?
+
+How do you standardize Launch Templates across org?
+
+How do you monitor fleet health globally?
+
+🔹 Advanced Edge Cases
+
+What happens if you detach primary ENI?
+
+What happens during stop/start at hypervisor level?
+
+How does Nitro isolate workloads?
+
+How do you troubleshoot high steal time?
+
+How do you handle large-scale key rotation?
+
+What happens if AZ capacity exhausted mid-scale?
+
+How do you debug instance that works in one AZ but not another?
+
+How do you recover deleted security group in production?
+
+What are common EC2 anti-patterns in enterprise?
+
+What architectural mistakes cause the biggest outages in EC2-based systems?
