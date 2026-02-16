@@ -1,0 +1,431 @@
+What is DNS?
+
+What problem does Route 53 solve?
+
+Why is it called Route 53?
+
+What is a hosted zone?
+
+What is the difference between public and private hosted zones?
+
+What is an A record?
+
+What is a CNAME record?
+
+What is an MX record?
+
+What is TTL in DNS?
+
+What happens when you type a domain in a browser?
+
+What is the difference between recursive and authoritative DNS?
+
+Can you use CNAME at root domain? Why or why not?
+
+What is an Alias record?
+
+What is DNS propagation?
+
+Why does DNS caching exist?
+
+🟡 INTERMEDIATE LEVEL (Cloud Integration)
+
+How does Route 53 integrate with API Gateway?
+
+How does Route 53 integrate with an Application Load Balancer?
+
+What happens internally when a DNS query reaches Route 53?
+
+What is weighted routing?
+
+What is latency-based routing?
+
+What is failover routing?
+
+How does Route 53 perform health checks?
+
+What happens when a health check fails?
+
+How does Route 53 know the user’s location for latency routing?
+
+What are the limitations of DNS-based routing?
+
+How do you reduce DNS failover time?
+
+What happens if TTL is set to 1 hour during an outage?
+
+How does Route 53 handle multi-region deployments?
+
+What is geolocation routing?
+
+What is multi-value answer routing?
+
+🟠 ADVANCED LEVEL (Architecture & Networking)
+
+Explain DNS resolution step-by-step at packet level.
+
+How does Anycast work in Route 53?
+
+How does AWS advertise its IP ranges globally?
+
+What is the role of BGP in AWS networking?
+
+Why does direct IP access fail for API Gateway custom domains?
+
+What is TLS SNI and why is it important?
+
+What happens during TCP + TLS handshake?
+
+How do you design active-active multi-region architecture using Route 53?
+
+When would you choose Global Accelerator instead of Route 53?
+
+What are common DNS anti-patterns in production?
+
+How does split-horizon DNS work?
+
+How do Private Hosted Zones work inside a VPC?
+
+What are Route 53 inbound and outbound resolver endpoints?
+
+How do you implement hybrid DNS with on-prem systems?
+
+How do you prevent DNS loops?
+
+What is DNSSEC?
+
+What is DNS amplification attack?
+
+How do you secure DNS in AWS?
+
+How would you design DNS for microservices at scale?
+
+What happens if a whole AWS region goes down?
+
+🔴 REAL-TIME PRODUCTION SCENARIOS
+
+Users in Dubai are getting routed to Mumbai — how do you troubleshoot?
+
+Traffic is not shifting even after changing weighted routing — why?
+
+Health checks show healthy but users experience downtime — possible causes?
+
+DNS change applied but users still hit old server — what happened?
+
+How do you perform zero-downtime migration between regions?
+
+How do you safely test Route 53 failover?
+
+How would you handle sudden DNS query spike (DDoS scenario)?
+
+Your DNS cost increased drastically — how do you analyze and reduce?
+
+How do you design DNS for a global IoT dashboard serving millions of devices?
+
+How would you architect DR with RTO < 60 seconds?
+
+How do you manage DNS across multiple AWS accounts?
+
+How do you handle environment isolation (dev/test/prod) using Route 53?
+
+How do you ensure session stickiness across multi-region DNS routing?
+
+How would you migrate from on-prem DNS to Route 53?
+
+What monitoring strategy would you implement for DNS reliability?
+
+How do you handle certificate validation for custom domains?
+
+How would you design SaaS multi-tenant DNS architecture?
+
+How do you handle DNS in Kubernetes multi-cluster deployments?
+
+What is the impact of ISP-level DNS caching on failover?
+
+How would you explain DNS architecture to a CTO during an outage?
+
+
+
+
+Explain the complete DNS resolution path from browser to Route 53 authoritative server.
+
+How does Route 53 differ from traditional BIND-based DNS infrastructure?
+
+What happens internally when you hit an API Gateway custom domain backed by Route 53?
+
+Why does accessing an API Gateway endpoint directly via IP fail?
+
+Explain SNI and its role in AWS routing.
+
+How does DNS caching affect high-availability architectures?
+
+How does TTL impact failover timing and user experience?
+
+What is the difference between recursive and authoritative DNS?
+
+How does Anycast improve DNS availability?
+
+How does Route 53 achieve 100% SLA?
+
+🔥 Routing Policies (Advanced)
+
+Compare weighted routing vs latency routing with production use cases.
+
+When would latency routing cause data inconsistency issues?
+
+How does Route 53 determine latency for routing decisions?
+
+How does geolocation routing differ from geoproximity routing?
+
+Design a blue/green deployment strategy using weighted routing.
+
+How would you gradually shift traffic from Mumbai to Dubai region?
+
+How does DNS-level routing differ from ALB-level routing?
+
+What are the limitations of DNS-based load balancing?
+
+How would you implement region-based compliance using Route 53?
+
+How would you avoid DNS stickiness issues in global deployments?
+
+🔥 Health Checks & Failover
+
+How does Route 53 determine endpoint health?
+
+What happens if health check regions disagree?
+
+Design multi-region active-passive failover using Route 53.
+
+Why is DNS failover not instant?
+
+How do you reduce failover time without increasing cost drastically?
+
+How do CloudWatch alarms integrate with Route 53 failover?
+
+What are the risks of low TTL values?
+
+When is DNS failover insufficient for enterprise DR?
+
+How would you test Route 53 failover in production safely?
+
+How do you design zero-downtime regional cutover?
+
+🔥 Private Hosted Zones & Hybrid DNS
+
+How does Private Hosted Zone resolution work inside a VPC?
+
+What happens if VPC DNS resolution is disabled?
+
+How do you share private zones across accounts?
+
+Explain split-horizon DNS in AWS.
+
+Design hybrid DNS between on-prem and AWS.
+
+What are Route 53 inbound endpoints?
+
+What are outbound resolver endpoints?
+
+How do resolver rules work?
+
+How do you prevent DNS loops in hybrid environments?
+
+How would you migrate on-prem DNS to AWS gradually?
+
+🔥 Networking Deep Dive
+
+How are AWS IP ranges advertised globally?
+
+Explain BGP’s role in AWS global routing.
+
+What is Anycast and how does Route 53 use it?
+
+How does AWS edge routing differ from regional routing?
+
+What happens during TCP + TLS handshake for API Gateway?
+
+How does DNS amplification attack work?
+
+How does Route 53 protect against DDoS?
+
+What is DNS poisoning and how do you mitigate it?
+
+How does EDNS improve DNS performance?
+
+Explain DNSSEC and its relevance in Route 53.
+
+🔥 Real-World Scenario Questions
+
+Users in UAE are hitting Mumbai instead of Dubai — how do you troubleshoot?
+
+Traffic is not shifting despite weighted routing changes — why?
+
+Health check shows healthy but endpoint is slow — how do you solve?
+
+DNS propagation delay caused outage — how do you prevent it?
+
+How do you design global IoT dashboard DNS architecture?
+
+How do you design multi-tenant SaaS using Route 53?
+
+How would you reduce DNS cost at 500M queries/month?
+
+How do you handle DNS during region-wide AWS outage?
+
+How do you ensure session persistence across regions?
+
+How do you monitor DNS resolution failures?
+
+🔥 Architecture & Design Thinking
+
+When would you choose Global Accelerator over Route 53?
+
+When would you choose CloudFront over Route 53 routing?
+
+Design active-active multi-region architecture using Route 53.
+
+Design disaster recovery RTO < 60 seconds.
+
+How do you handle DNS in Kubernetes multi-cluster setup?
+
+How does Route 53 compare with Cloudflare?
+
+How do you architect zero-downtime migration between regions?
+
+What are common Route 53 anti-patterns?
+
+How do you design DNS for microservices at scale?
+
+What would you change if IPv4 becomes unavailable?
+🔴 REAL-TIME OUTAGE & INCIDENT SCENARIOS
+
+Your primary region is down, but traffic is not failing over — how do you debug?
+
+Health check is failing intermittently — what could cause false negatives?
+
+After DNS cutover, 30% of users still hit old infrastructure — why?
+
+How would you handle a partial ISP outage affecting only one geography?
+
+Your latency routing is sending traffic to a slower region — why?
+
+DNS resolution works in one country but not another — how do you troubleshoot?
+
+Your custom domain works without HTTPS but fails with HTTPS — possible causes?
+
+DNS change broke mobile app connectivity but web works — why?
+
+API Gateway works via default endpoint but fails via custom domain — why?
+
+How do you debug DNS resolution issues from inside a VPC?
+
+🔴 COST & SCALE SCENARIOS
+
+DNS query volume suddenly increased 10x — how do you analyze root cause?
+
+How do you reduce Route 53 costs at 1 billion queries per month?
+
+How would you design DNS for 5 million IoT devices polling every minute?
+
+How do you avoid DNS becoming a bottleneck in global SaaS?
+
+How do CDN caching and DNS TTL interact?
+
+What happens if your TTL is set too low under high traffic?
+
+How do you handle DNS caching in enterprise corporate networks?
+
+How do you monitor DNS query patterns in production?
+
+How do you detect DNS abuse or scraping?
+
+How do you architect DNS to handle Black Friday-level spikes?
+
+🔴 SECURITY SCENARIOS
+
+How would you protect against DNS hijacking?
+
+How do you prevent unauthorized changes to Route 53 records?
+
+What happens if your domain registrar account is compromised?
+
+How do you secure private hosted zones in multi-account setups?
+
+How do you audit DNS record changes?
+
+How would you implement DNS-level isolation between tenants?
+
+How do you mitigate DNS-based DDoS attacks?
+
+What is the risk of open resolver misconfiguration?
+
+How would you respond to DNS poisoning incident?
+
+How do you implement least privilege for DNS management?
+
+🔴 MULTI-REGION & GLOBAL ARCHITECTURE
+
+How do you design active-active multi-region write architecture using DNS?
+
+How do you ensure database consistency across latency-based routing?
+
+How do you design region evacuation strategy?
+
+How do you migrate traffic gradually from one continent to another?
+
+How do you handle user sessions during region failover?
+
+How do you implement global canary deployments?
+
+How do you handle DNS for data residency compliance?
+
+How do you design disaster recovery drill testing?
+
+How do you design DNS for blue-green across continents?
+
+How would you manage DNS during AWS region-wide service degradation?
+
+🔴 HYBRID & ENTERPRISE SCENARIOS
+
+On-prem cannot resolve AWS private DNS — what could be wrong?
+
+AWS cannot resolve on-prem domain — how do you debug?
+
+How do you avoid DNS loops in hybrid environments?
+
+How do you design centralized DNS management across 20 AWS accounts?
+
+How do you implement split-horizon DNS for internal vs external users?
+
+How do you migrate legacy BIND servers to Route 53?
+
+How do you integrate corporate Active Directory DNS with AWS?
+
+How do you handle overlapping domain namespaces?
+
+How do you isolate staging DNS from production in shared VPC?
+
+How do you implement DNS governance in enterprise cloud?
+
+🔴 CTO / ARCHITECT LEVEL QUESTIONS
+
+When would you avoid DNS-based failover entirely?
+
+When would you choose Global Accelerator instead of Route 53?
+
+How would you explain DNS architecture to board members during outage?
+
+What are DNS anti-patterns that cause million-dollar outages?
+
+How do you design DNS to survive registrar failure?
+
+How do you architect zero-downtime region migration?
+
+How do you design DNS observability strategy?
+
+How would you simulate full DNS outage for chaos testing?
+
+How do you design DNS for edge-compute workloads?
+
+How do you future-proof DNS for IPv6-only internet?
