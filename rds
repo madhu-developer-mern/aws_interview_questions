@@ -1,0 +1,131 @@
+Explain the architectural differences between Amazon RDS MySQL and Amazon Aurora MySQL.
+
+How would you design a highly available database architecture across multiple AZs?
+
+When would you use Multi-AZ vs Read Replicas?
+
+How does RDS handle failover internally?
+
+What are the trade-offs between RDS and self-managed MySQL on EC2?
+
+How would you design a multi-region database architecture?
+
+How do you handle schema changes in a zero-downtime production system?
+
+How would you design RDS for a high write-throughput IoT ingestion system?
+
+What are the limitations of RDS in high concurrency systems?
+
+How would you migrate a 2TB on-prem MySQL database to RDS with minimal downtime?
+
+Performance & Optimization
+
+How do you identify and troubleshoot slow queries in RDS?
+
+Explain how MySQL indexing strategy impacts read/write performance.
+
+How would you handle connection storms in Lambda + RDS architecture?
+
+What is RDS Proxy and when should it be used?
+
+How do you tune MySQL for high transaction workloads?
+
+Explain InnoDB architecture and its implications.
+
+How would you optimize a poorly performing query without adding hardware?
+
+What are common causes of high CPU utilization in RDS?
+
+How does storage type (gp2 vs gp3 vs io1) impact performance?
+
+How do you calculate maximum DB connections safely?
+
+Security & Networking
+
+How does RDS integrate with VPC security?
+
+Why should RDS not be publicly accessible in production?
+
+How would you implement IAM database authentication?
+
+How do you rotate database credentials securely?
+
+Explain encryption at rest and in transit in RDS.
+
+How would you restrict database access to specific services only?
+
+What is the impact of misconfigured Security Groups on RDS?
+
+How would you design database access in a zero-trust environment?
+
+High Availability & Disaster Recovery
+
+What is the difference between automated backups and snapshots?
+
+How would you design a disaster recovery strategy with RPO < 5 minutes?
+
+How do you restore RDS to a specific point in time?
+
+What are the limitations of cross-region read replicas?
+
+How do you test failover scenarios in production safely?
+
+How do you calculate RTO and RPO for RDS workloads?
+
+Cost Optimization
+
+How do you reduce RDS cost without impacting reliability?
+
+When should you choose Aurora Serverless?
+
+How do storage autoscaling and IOPS affect cost?
+
+What are hidden cost areas in RDS deployments?
+
+When does it make sense to move from RDS to DynamoDB?
+
+Operations & DevOps
+
+How do you monitor RDS in production?
+
+What CloudWatch metrics are critical for RDS health?
+
+How do you automate RDS provisioning using Terraform or CloudFormation?
+
+How would you implement blue/green deployments for databases?
+
+How do you perform major version upgrades safely?
+
+How do you detect and handle deadlocks in MySQL?
+
+How would you design CI/CD pipelines for database schema migrations?
+
+How do you ensure database consistency during deployments?
+
+Real-World Problem Solving
+
+A production RDS instance CPU suddenly spikes to 100%. What is your approach?
+
+Application latency increases, but CPU and memory are normal. What could be wrong?
+
+RDS runs out of connections during traffic spikes. How do you fix it?
+
+A read-heavy system is overwhelming the primary instance. What is your strategy?
+
+You need to handle 50k writes per second. Can RDS handle it? How?
+
+A developer wants to open RDS to 0.0.0.0/0 for testing. What do you say?
+
+How would you handle database sharding in AWS?
+
+When would you move from relational to NoSQL?
+
+How do you design a globally distributed SaaS database model?
+
+How do you isolate tenants in a multi-tenant RDS architecture?
+
+How would you design database layer autoscaling?
+
+How do you benchmark RDS before production go-live?
+
+What are the most common RDS production failures you have seen?
