@@ -1,3 +1,157 @@
+Basic Understanding
+
+What is Amazon RDS and what problems does it solve?
+
+What database engines are supported in RDS?
+
+What is the difference between RDS and running MySQL on EC2?
+
+What is a DB instance in RDS?
+
+What is a DB subnet group?
+
+What is a parameter group?
+
+What is an option group?
+
+What is the default port for MySQL in RDS?
+
+Can RDS run inside a private subnet?
+
+What happens if you delete an RDS instance?
+
+Availability & Replication
+
+What is Multi-AZ in RDS?
+
+What is the difference between Multi-AZ and Read Replica?
+
+Does Multi-AZ improve read performance?
+
+How does failover work in Multi-AZ?
+
+What is a cross-region read replica?
+
+Can a read replica be promoted?
+
+How long does failover usually take?
+
+What happens to the endpoint during failover?
+
+How do you scale read-heavy workloads?
+
+When should you use Aurora instead of standard RDS?
+
+Backup & Recovery
+
+What are automated backups?
+
+What is Point-In-Time Recovery (PITR)?
+
+What is the difference between automated backups and manual snapshots?
+
+Are snapshots incremental?
+
+How long can you retain backups?
+
+How do you restore an RDS instance?
+
+Can you restore a snapshot to another region?
+
+What happens to backups if you delete the DB?
+
+How do you test backup reliability?
+
+What is RPO and RTO in context of RDS?
+
+Security
+
+How does RDS integrate with VPC?
+
+Why should RDS not be publicly accessible?
+
+How do Security Groups protect RDS?
+
+How do you encrypt data at rest?
+
+How do you encrypt data in transit?
+
+What is IAM database authentication?
+
+How do you rotate database credentials?
+
+What are common security mistakes in RDS setups?
+
+Can RDS be accessed from multiple VPCs?
+
+How do you restrict access to only specific services?
+
+Performance & Monitoring
+
+What CloudWatch metrics are important for RDS?
+
+What does CPU utilization indicate?
+
+What causes high database connections?
+
+What is storage autoscaling?
+
+How do you analyze slow queries?
+
+What is Performance Insights?
+
+How do you improve query performance?
+
+What is the impact of indexing?
+
+What causes high IOPS usage?
+
+How do you troubleshoot connection timeout issues?
+
+Cost & Optimization
+
+What factors affect RDS cost?
+
+How can you reduce RDS cost?
+
+What is the difference between gp2 and gp3 storage?
+
+When should you use provisioned IOPS?
+
+Does stopping RDS stop all billing?
+
+What happens after 7 days if RDS is stopped?
+
+What is Aurora Serverless?
+
+When is Aurora Serverless a good choice?
+
+How do snapshots impact cost?
+
+What are common hidden costs in RDS?
+
+Real-Life Scenario Questions
+
+RDS CPU is at 100%. What do you check first?
+
+Application latency increased suddenly. DB seems healthy. What next?
+
+Connections are exhausted. How do you fix it?
+
+How would you handle database scaling during traffic spikes?
+
+How do you migrate on-prem MySQL to RDS?
+
+What would you do if primary DB crashes?
+
+How do you handle schema migrations safely?
+
+When would you move from RDS to NoSQL?
+
+How would you design a multi-tenant database in RDS?
+
+What are common production mistakes in RDS deployments?
+
 Explain the architectural differences between Amazon RDS MySQL and Amazon Aurora MySQL.
 
 How would you design a highly available database architecture across multiple AZs?
@@ -19,6 +173,90 @@ What are the limitations of RDS in high concurrency systems?
 How would you migrate a 2TB on-prem MySQL database to RDS with minimal downtime?
 
 Performance & Optimization
+
+
+
+Your RDS CPU is at 95% but query count is low. What could be happening?
+
+Application latency increased, but RDS metrics look normal. Where do you investigate next?
+
+A sudden spike in database connections causes outages. What architectural mistake likely occurred?
+
+Multi-AZ is enabled, but failover took 2 minutes. Why?
+
+After enabling a read replica, writes became slower. Explain why.
+
+You increased instance size but performance did not improve. What could be wrong?
+
+Your storage auto-scaled unexpectedly. What might have caused that?
+
+Deadlocks are occurring randomly under peak load. How do you approach debugging?
+
+You see high IOPS but low CPU. What does that indicate?
+
+Backup window overlaps with peak traffic. What could happen?
+
+RDS failover happened without downtime alerting. Why?
+
+After restoring from snapshot, application errors increased. Why?
+
+You see replication lag on read replica. What causes it?
+
+Your application reads stale data after failover. Explain.
+
+You enabled encryption at rest. Does it affect performance?
+
+DB connections slowly increase over time until crash. What pattern is this?
+
+You changed parameter group values but no effect seen. Why?
+
+Your DB works in staging but fails in production with same schema. Why?
+
+Your RDS is public but protected by password. Is that secure enough?
+
+You enabled Multi-AZ. Does that protect from accidental deletes?
+
+🚨 Lambda + RDS Tricky Questions
+
+Lambda concurrency spikes to 1000. What happens to MySQL connections?
+
+Why is Lambda + RDS often considered a dangerous combination?
+
+What problem does RDS Proxy solve?
+
+If you reuse DB connections in Lambda global scope, is that enough?
+
+What happens if Lambda times out during a DB transaction?
+
+How do you prevent connection exhaustion in serverless?
+
+Why can cold starts impact database performance?
+
+How do you design idempotency for Lambda + RDS writes?
+
+Can you use IAM authentication with Lambda + RDS?
+
+Why might Lambda + Aurora Serverless behave differently from standard RDS?
+
+How do you safely batch writes from Lambda?
+
+What happens if Lambda retries after partial DB write?
+
+Why should you avoid long-running transactions in Lambda?
+
+How do you monitor connection pool health in Lambda?
+
+Can Lambda share DB connections across instances?
+
+What is the maximum connections formula for MySQL in RDS?
+
+How does burst concurrency affect transaction isolation?
+
+How do you implement backpressure with Lambda?
+
+What happens if RDS becomes slow during Lambda execution?
+
+Why is SQS often placed between Lambda and RDS?
 
 How do you identify and troubleshoot slow queries in RDS?
 
@@ -129,3 +367,284 @@ How would you design database layer autoscaling?
 How do you benchmark RDS before production go-live?
 
 What are the most common RDS production failures you have seen?
+1️⃣ Design a Scalable IoT Data Ingestion Platform
+Problem
+
+Millions of devices send telemetry every 30 seconds.
+Requirements:
+
+No data loss
+
+Real-time dashboard
+
+Historical analytics (2+ years retention)
+
+Multi-region support
+
+What interviewer evaluates
+
+Ingestion buffering strategy
+
+Backpressure handling
+
+Database selection
+
+Partitioning & indexing
+
+Cost vs performance trade-offs
+
+Discussion areas
+
+MQTT vs HTTPS ingestion
+
+Kinesis vs SQS buffering
+
+RDS vs DynamoDB vs Timestream
+
+Cold storage in S3
+
+Lambda vs container workers
+
+Multi-AZ failover
+
+Exactly-once vs at-least-once semantics
+
+2️⃣ Design a High-Traffic E-Commerce Platform
+Problem
+
+Black Friday traffic spike:
+
+100k concurrent users
+
+Heavy reads
+
+Moderate writes
+
+Payments must never duplicate
+
+Focus Areas
+
+Read replicas
+
+Caching strategy (Redis)
+
+Inventory consistency model
+
+Payment idempotency
+
+Rate limiting
+
+Circuit breaker pattern
+
+DB connection pooling
+
+Database isolation levels
+
+3️⃣ Design a Multi-Tenant SaaS Platform
+Problem
+
+You are building a B2B SaaS app:
+
+5000 tenants
+
+Each tenant isolated
+
+Data privacy mandatory
+
+Per-tenant custom configurations
+
+Design Considerations
+
+Shared DB vs separate DB per tenant
+
+Schema-per-tenant pattern
+
+Row-level isolation
+
+IAM integration
+
+Scaling strategy
+
+Tenant-based rate limiting
+
+Cross-region data residency compliance
+
+4️⃣ Design a Real-Time Notification System
+Problem
+
+Send:
+
+Email
+
+SMS
+
+Push
+To millions of users instantly.
+
+Key Design Points
+
+Queue-based fanout
+
+SNS vs Kafka
+
+Retry & DLQ
+
+Idempotency
+
+Throttling control
+
+Backoff strategy
+
+Observability
+
+Dead-letter reprocessing
+
+5️⃣ Design a Global URL Shortener (Like Bitly)
+Requirements
+
+Billions of redirects
+
+Ultra-low latency
+
+Highly available
+
+Analytics tracking
+
+Design Focus
+
+Key generation strategy
+
+Hot key mitigation
+
+Caching layer
+
+Global replication
+
+CDN usage
+
+Read-heavy optimization
+
+Write consistency trade-offs
+
+6️⃣ Design a Large-Scale Log Processing System
+Requirements
+
+TBs per day logs
+
+Searchable within seconds
+
+Long-term archival
+
+Queryable by time range
+
+Discussion Points
+
+Kafka ingestion
+
+Stream processing
+
+OpenSearch vs S3 + Athena
+
+Partitioning strategy
+
+Cost optimization
+
+Retention tiers
+
+7️⃣ Design a Distributed Job Scheduling System
+Requirements
+
+Millions of scheduled tasks
+
+Retry with backoff
+
+Exactly-once execution
+
+Fault tolerance
+
+Focus
+
+Queue visibility timeout
+
+Worker autoscaling
+
+Idempotency tokens
+
+DB locking strategy
+
+Horizontal scalability
+
+8️⃣ Design a Social Media Feed System
+Requirements
+
+News feed generation
+
+Millions of followers
+
+Real-time updates
+
+Personalized ranking
+
+Deep Discussion
+
+Fan-out-on-write vs fan-out-on-read
+
+Caching layers
+
+Timeline storage
+
+Sharding strategy
+
+Hot partition handling
+
+9️⃣ Design a Payment Processing System
+Requirements
+
+ACID compliance
+
+No double charge
+
+High auditability
+
+Regulatory compliance
+
+Key Areas
+
+Two-phase commit vs eventual consistency
+
+Idempotency keys
+
+Transaction isolation
+
+Ledger design
+
+Audit trail storage
+
+Fraud detection integration
+
+🔟 Design a Database Migration Strategy for a Legacy Monolith
+Problem
+
+On-prem MySQL → AWS RDS/Aurora
+
+2TB database
+
+24/7 uptime required
+
+Minimal downtime
+
+Expected Discussion
+
+DMS replication
+
+Dual-write strategy
+
+Cutover plan
+
+Rollback strategy
+
+Testing approach
+
+Data validation
+
+
