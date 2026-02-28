@@ -1,0 +1,209 @@
+PHASE 1 — Core Foundations (Must Know First)
+
+What is CDN
+
+What is CloudFront
+
+Edge locations vs Regions
+
+Origin concept (S3 / EC2 / ALB / Custom origin)
+
+HTTP vs HTTPS
+
+DNS basics
+
+Route 53 basics
+
+Static hosting concepts
+
+Browser caching fundamentals
+
+🔵 PHASE 2 — S3 Static Website Hosting (Before CloudFront)
+
+S3 bucket creation
+
+Bucket policies
+
+Block public access settings
+
+Static website hosting configuration
+
+Index and error documents
+
+IAM vs Bucket Policy
+
+Public vs Private bucket
+
+Testing via S3 website endpoint
+
+🔵 PHASE 3 — CloudFront Core Concepts
+
+Distribution creation
+
+Origin configuration
+
+Default root object
+
+Viewer protocol policy
+
+Allowed HTTP methods
+
+Cache behavior basics
+
+TTL (Min / Max / Default)
+
+Cache key
+
+Headers forwarding
+
+Query string forwarding
+
+Cookies forwarding
+
+Compression
+
+Invalidation
+
+Price classes
+
+🔵 PHASE 4 — Security
+
+HTTPS enforcement
+
+ACM certificate
+
+Custom domain setup
+
+Route 53 alias record
+
+Origin Access Control (OAC)
+
+Origin Access Identity (OAI – legacy)
+
+Prevent direct S3 access
+
+Signed URLs
+
+Signed cookies
+
+WAF integration
+
+Geo restriction
+
+Shield (DDoS protection)
+
+🔵 PHASE 5 — Performance Optimization
+
+Cache hit ratio
+
+Edge caching behavior
+
+Origin shield
+
+HTTP/2 & HTTP/3
+
+Brotli compression
+
+Image optimization strategy
+
+Lambda@Edge basics
+
+CloudFront Functions
+
+Cache control headers
+
+Immutable caching
+
+🔵 PHASE 6 — Advanced Integration
+
+CloudFront + API Gateway
+
+CloudFront + ALB
+
+CloudFront + EC2
+
+CloudFront + Lambda backend
+
+Multiple origins
+
+Path-based routing
+
+SPA routing (React / Vue routing fix)
+
+Error page handling (403 → index.html redirect)
+
+Custom error responses
+
+WebSocket support
+
+🔵 PHASE 7 — Monitoring & Debugging
+
+CloudFront logs (standard logs)
+
+Real-time logs
+
+CloudWatch metrics
+
+Cache statistics
+
+Debugging 403 errors
+
+Debugging 502 errors
+
+TTL testing
+
+Header inspection
+
+Browser DevTools network analysis
+
+🔵 PHASE 8 — DevOps & Automation
+
+CloudFront using AWS CLI
+
+Infrastructure as Code (Terraform)
+
+CloudFormation basics
+
+CI/CD deployment pipeline
+
+S3 sync automation
+
+Cache invalidation automation
+
+Versioned deployments
+
+Blue/Green deployments
+
+🔵 PHASE 9 — Cost Optimization
+
+Data transfer pricing
+
+Price classes
+
+Origin vs edge cost difference
+
+Invalidation cost
+
+Cache efficiency impact on cost
+
+Monitoring billing for CDN
+
+🔵 PHASE 10 — Enterprise Level Understanding
+
+Multi-region architecture
+
+Failover origin setup
+
+High availability strategy
+
+Edge computing architecture
+
+CDN comparison (CloudFront vs Cloudflare)
+
+Security best practices
+
+Performance benchmarking
+
+SLA & reliability design
+
+Global architecture patterns
