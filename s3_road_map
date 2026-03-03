@@ -1,0 +1,363 @@
+Buckets
+
+Bucket naming rules
+
+Object storage model
+
+Object keys
+
+Object metadata (system-defined metadata)
+
+User-defined metadata
+
+Object tags
+
+Object ACLs
+
+Bucket ACLs
+
+Bucket policies
+
+IAM policies
+
+IAM roles
+
+IAM condition keys for S3
+
+Access evaluation logic
+
+Explicit deny precedence
+
+Block Public Access settings
+
+S3 Object Ownership
+
+Bucket owner enforced mode
+
+Access Points
+
+Multi-Region Access Points
+
+S3 Object Lambda
+
+S3 Batch Operations
+
+S3 Inventory
+
+S3 Storage Lens
+
+S3 Analytics
+
+S3 Event Notifications
+
+Event filtering rules
+
+EventBridge integration
+
+SNS integration
+
+SQS integration
+
+Lambda triggers
+
+Strong read-after-write consistency
+
+LIST consistency behavior
+
+Object versioning
+
+Delete markers
+
+MFA delete
+
+Object Lock
+
+Governance mode retention
+
+Compliance mode retention
+
+Legal hold
+
+Default retention configuration
+
+Same-Region Replication (SRR)
+
+Cross-Region Replication (CRR)
+
+Replication Time Control (RTC)
+
+Multi-destination replication
+
+Replication of delete markers
+
+Replication of encrypted objects
+
+Replication metrics
+
+Replication IAM role requirements
+
+Lifecycle configuration rules
+
+Transition actions
+
+Expiration actions
+
+Noncurrent version transitions
+
+Noncurrent version expiration
+
+Abort incomplete multipart uploads
+
+Storage classes
+
+S3 Standard
+
+S3 Intelligent-Tiering
+
+Intelligent-Tiering archive tiers
+
+S3 Standard-IA
+
+S3 One Zone-IA
+
+S3 Glacier Instant Retrieval
+
+S3 Glacier Flexible Retrieval
+
+S3 Glacier Deep Archive
+
+S3 Express One Zone
+
+Minimum storage duration charges
+
+Retrieval fees
+
+Early deletion fees
+
+Request pricing model
+
+Data transfer pricing
+
+Multipart upload
+
+Multipart upload limits
+
+ETag behavior
+
+Checksum algorithms (MD5, SHA256, CRC32, etc.)
+
+Content-MD5 header
+
+Range GET requests
+
+Conditional requests (If-Match, If-None-Match)
+
+Presigned URLs
+
+Presigned POST
+
+Temporary credentials (STS)
+
+CORS configuration
+
+Allowed origins
+
+Allowed methods
+
+Allowed headers
+
+Exposed headers
+
+Preflight requests
+
+Static website hosting
+
+Index document configuration
+
+Error document configuration
+
+Routing rules
+
+CloudFront origin integration
+
+Origin Access Identity (OAI)
+
+Origin Access Control (OAC)
+
+Transfer Acceleration
+
+Dual-stack endpoints (IPv4/IPv6)
+
+Virtual-hosted–style URLs
+
+Path-style URLs (legacy)
+
+Regional endpoints
+
+VPC Gateway Endpoint
+
+VPC Interface Endpoint (PrivateLink)
+
+Endpoint policies
+
+TLS enforcement via bucket policy
+
+Source IP restriction
+
+Source VPC restriction
+
+SSE-S3 encryption
+
+SSE-KMS encryption
+
+SSE-C (customer-provided keys)
+
+Client-side encryption
+
+KMS key policies
+
+KMS grants
+
+Bucket keys (KMS cost optimization)
+
+Object-level encryption context
+
+CloudTrail data events
+
+Server access logging
+
+Request metrics
+
+4xx error metrics
+
+5xx error metrics
+
+503 SlowDown behavior
+
+Retry and backoff strategies
+
+Request rate scaling per prefix
+
+Partitioning behavior
+
+Prefix entropy strategy
+
+Object listing pagination
+
+Continuation tokens
+
+S3 Select
+
+Glacier restore operations
+
+Restore tiers (Expedited, Standard, Bulk)
+
+Restore expiration period
+
+Storage class analysis
+
+Access Analyzer for S3
+
+Cross-account access configuration
+
+Organization SCP interaction
+
+Centralized logging bucket pattern
+
+Data residency considerations
+
+Compliance frameworks (SEC 17a-4, GDPR implications)
+
+Data classification tagging
+
+Object-level retention enforcement
+
+Bucket-level replication configuration
+
+Replication filtering by prefix or tag
+
+Requester Pays buckets
+
+Object size limits (5 TB max object size)
+
+Minimum object size constraints (e.g., IA classes)
+
+PUT, GET, DELETE operations
+
+COPY operation
+
+HEAD operation
+
+LIST operations
+
+Conditional copy
+
+Object ownership transfer
+
+Cross-account uploads
+
+Public bucket detection
+
+Access logging target bucket permissions
+
+S3 on Outposts
+
+S3 Access Points for Outposts
+
+Object replication metrics in CloudWatch
+
+Event ordering limitations
+
+At-least-once event delivery
+
+Duplicate event handling
+
+Storage durability model (11 nines)
+
+Availability SLA model
+
+Data integrity checks
+
+Regional isolation model
+
+AWS Global Infrastructure mapping
+
+Data transfer acceleration edge routing
+
+Bucket quotas
+
+Object quotas (practical limits)
+
+API rate limits
+
+Large-scale listing optimization
+
+Small file problem considerations
+
+Data lake partitioning best practices
+
+Glue catalog integration
+
+Athena integration
+
+Redshift Spectrum integration
+
+EMR integration
+
+Macie integration
+
+S3 Express One Zone directory buckets
+
+Directory bucket semantics
+
+Object Lambda access points
+
+S3 Object Lambda transformations
+
+Batch replication
+
+Batch tagging operations
+
+Batch restore operations
+
+Glacier vault lock (legacy comparison context)
