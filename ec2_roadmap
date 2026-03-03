@@ -1,0 +1,421 @@
+EC2 instances
+
+Instance types (General purpose, Compute optimized, Memory optimized, Storage optimized, Accelerated computing)
+
+Nitro system architecture
+
+Xen vs Nitro hypervisor
+
+Bare metal instances
+
+Graviton processors
+
+GPU instances
+
+FPGA instances
+
+Instance families (t, m, c, r, i, d, g, p, inf, etc.)
+
+Instance sizes
+
+vCPU allocation
+
+CPU credits (T family)
+
+Unlimited mode (T instances)
+
+AMIs (Amazon Machine Images)
+
+Custom AMIs
+
+AMI sharing
+
+AMI copying across regions
+
+AMI encryption
+
+Launch templates
+
+Launch configurations (legacy)
+
+Instance lifecycle states (pending, running, stopping, stopped, terminated)
+
+Instance reboot behavior
+
+Instance stop vs terminate difference
+
+Instance hibernation
+
+Instance metadata service (IMDS)
+
+IMDSv2
+
+User data scripts
+
+Cloud-init
+
+Key pairs
+
+SSH access
+
+EC2 Instance Connect
+
+Systems Manager Session Manager
+
+Elastic IP addresses
+
+Public IP assignment
+
+Private IP addressing
+
+Secondary private IPs
+
+Elastic Network Interface (ENI)
+
+ENI attachment/detachment
+
+Security groups
+
+Stateful firewall behavior
+
+Inbound rules
+
+Outbound rules
+
+Network ACLs
+
+Stateless firewall behavior
+
+VPC
+
+Subnets (public/private)
+
+Route tables
+
+Internet Gateway
+
+NAT Gateway
+
+NAT Instance
+
+VPC peering
+
+Transit Gateway
+
+VPC endpoints
+
+Placement groups (Cluster, Spread, Partition)
+
+Dedicated instances
+
+Dedicated hosts
+
+Host affinity
+
+Capacity reservations
+
+On-Demand instances
+
+Reserved instances
+
+Savings Plans
+
+Spot instances
+
+Spot interruption handling
+
+Spot Fleet
+
+EC2 Fleet
+
+Auto Scaling groups
+
+Target tracking scaling
+
+Step scaling
+
+Predictive scaling
+
+Health checks (EC2 vs ELB)
+
+Lifecycle hooks
+
+Warm pools
+
+Elastic Load Balancer (ALB, NLB, CLB)
+
+Target groups
+
+Cross-zone load balancing
+
+Sticky sessions
+
+Connection draining
+
+EBS volumes
+
+EBS volume types (gp2, gp3, io1, io2, st1, sc1)
+
+Provisioned IOPS
+
+Throughput optimization
+
+EBS snapshots
+
+Snapshot lifecycle management
+
+Snapshot encryption
+
+Fast snapshot restore
+
+EBS multi-attach
+
+Instance store volumes
+
+NVMe storage
+
+RAID configuration
+
+File systems (ext4, xfs)
+
+EFS integration
+
+FSx integration
+
+ENA (Elastic Network Adapter)
+
+Enhanced networking
+
+SR-IOV
+
+Jumbo frames
+
+Network bandwidth limits per instance
+
+EFA (Elastic Fabric Adapter)
+
+CPU pinning
+
+NUMA awareness
+
+CloudWatch metrics
+
+Detailed monitoring
+
+CloudWatch agent
+
+Status checks (system vs instance)
+
+EC2 instance recovery
+
+Auto recovery
+
+CloudTrail integration
+
+AWS Config tracking
+
+AWS Systems Manager
+
+Patch Manager
+
+Run Command
+
+Parameter Store
+
+Secrets Manager integration
+
+IAM instance profiles
+
+IAM role attachment
+
+STS credentials on EC2
+
+EC2 Image Builder
+
+EC2 Launch Wizard
+
+VM Import/Export
+
+Elastic GPU (legacy)
+
+Elastic inference
+
+Elastic Fabric Adapter
+
+HPC cluster design
+
+AMI baking strategy
+
+Blue/Green deployments
+
+Rolling deployments
+
+Immutable infrastructure pattern
+
+Mutable infrastructure pattern
+
+Golden image pattern
+
+Bastion host pattern
+
+Jump server pattern
+
+Reverse proxy pattern
+
+Reverse SSH tunneling
+
+Firewall hardening
+
+OS patching strategy
+
+Kernel upgrade considerations
+
+Ephemeral storage considerations
+
+Data persistence strategy
+
+Failover architecture
+
+Multi-AZ architecture
+
+Multi-region architecture
+
+Disaster recovery strategies (pilot light, warm standby, active-active)
+
+Autoscaling cooldown period
+
+Health check grace period
+
+Application load balancing vs network load balancing
+
+TLS termination
+
+End-to-end encryption
+
+IPv6 support
+
+Dual-stack networking
+
+DNS resolution in VPC
+
+Private hosted zones
+
+Route 53 integration
+
+Hybrid connectivity (Direct Connect, VPN)
+
+Outposts integration
+
+Local Zones
+
+Wavelength Zones
+
+Edge computing integration
+
+Cost optimization strategies
+
+Instance right-sizing
+
+Idle instance detection
+
+CPU utilization monitoring
+
+Memory monitoring (via agent)
+
+Overprovisioning risk
+
+Underprovisioning risk
+
+High availability design
+
+Single point of failure elimination
+
+AZ failure tolerance
+
+Graceful shutdown handling
+
+SIGTERM handling in autoscaling
+
+Boot time optimization
+
+AMI size optimization
+
+Container workloads on EC2
+
+Docker on EC2
+
+Kubernetes worker nodes
+
+ECS on EC2 launch type
+
+ECS capacity providers
+
+Self-managed Kubernetes cluster
+
+Infrastructure as Code (CloudFormation, Terraform)
+
+Instance tagging strategy
+
+Tag-based access control
+
+Billing allocation tags
+
+Instance scheduler
+
+EC2 quotas
+
+API throttling
+
+EC2 service limits
+
+Throttle backoff strategies
+
+EC2 pricing model breakdown
+
+Data transfer costs
+
+Cross-AZ traffic costs
+
+Inter-region traffic costs
+
+EBS IOPS cost modeling
+
+Spot market price fluctuations
+
+Termination protection
+
+Stop protection
+
+Auto Scaling termination policies
+
+Instance refresh
+
+Warm restart pattern
+
+Graceful scale-in protection
+
+Instance protection from scale-in
+
+Kernel panic recovery
+
+Memory exhaustion handling
+
+CPU steal time analysis
+
+Disk I/O bottleneck analysis
+
+Network throughput bottleneck analysis
+
+Host hardware failure impact
+
+Maintenance events
+
+Scheduled events
+
+Instance retirement
+
+Placement capacity error handling
+
+AMI deprecation
+
+Legacy instance retirement
