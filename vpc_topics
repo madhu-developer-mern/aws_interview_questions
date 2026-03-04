@@ -1,1 +1,250 @@
 
+1. VPC Fundamentals
+
+What is Amazon VPC
+
+VPC architecture overview
+
+Regions and Availability Zones
+
+Default VPC
+
+Custom VPC
+
+2. VPC Creation and Configuration
+
+Creating a VPC
+
+VPC CIDR blocks
+
+IPv4 addressing
+
+IPv6 addressing
+
+Multiple CIDR blocks in a VPC
+
+3. Subnets
+
+Subnet fundamentals
+
+Public subnets
+
+Private subnets
+
+Subnet CIDR allocation
+
+Subnet routing
+
+Subnet availability zone placement
+
+4. IP Address Management
+
+Private IPv4 addresses
+
+Public IPv4 addresses
+
+Elastic IP addresses
+
+IPv6 addressing
+
+IP address allocation strategies
+
+5. Route Tables
+
+Route table basics
+
+Main route table
+
+Custom route tables
+
+Route propagation
+
+Route priority and evaluation
+
+6. Internet Connectivity
+
+Internet Gateway (IGW)
+
+Public internet access
+
+Egress-only internet gateway (IPv6)
+
+Public subnet internet architecture
+
+7. Private Connectivity
+
+NAT Gateway
+
+NAT instance
+
+Private subnet internet access
+
+Outbound internet architecture
+
+8. Security
+
+Security groups
+
+Network ACLs
+
+Stateless vs stateful filtering
+
+Security best practices
+
+9. Elastic Network Interfaces
+
+Network interface basics
+
+Primary and secondary private IPs
+
+Attaching ENIs to instances
+
+Multiple network interfaces
+
+10. VPC Peering
+
+VPC peering overview
+
+Peering architecture
+
+Cross-account peering
+
+Cross-region peering
+
+Peering limitations
+
+11. Transit Gateway
+
+AWS Transit Gateway overview
+
+Hub and spoke network architecture
+
+Transit gateway attachments
+
+Route propagation with TGW
+
+12. Private Service Access
+
+VPC endpoints
+
+Interface endpoints
+
+Gateway endpoints
+
+Private access to AWS services
+
+13. DNS and Name Resolution
+
+Amazon provided DNS
+
+DNS hostnames
+
+DNS resolution inside VPC
+
+Private hosted zones
+
+14. DHCP Options
+
+DHCP option sets
+
+Custom DNS servers
+
+Domain name configuration
+
+15. VPC Flow Logs
+
+Flow logs overview
+
+Traffic monitoring
+
+Log destinations
+
+Log analysis
+
+16. Traffic Mirroring
+
+Traffic mirroring overview
+
+Packet inspection
+
+Network monitoring architectures
+
+17. Network Load Balancing Integration
+
+Integration with Elastic Load Balancing
+
+Internal load balancers
+
+External load balancers
+
+18. Hybrid Connectivity
+
+VPN connections
+
+Site-to-site VPN
+
+Client VPN
+
+Hybrid networking architecture
+
+19. Dedicated Connectivity
+
+AWS Direct Connect overview
+
+Direct Connect architecture
+
+Private virtual interfaces
+
+Public virtual interfaces
+
+20. Multi-VPC Architectures
+
+Hub-and-spoke architecture
+
+Shared services VPC
+
+Network segmentation strategies
+
+21. Multi-Region Networking
+
+Cross-region connectivity
+
+Global networking architectures
+
+Disaster recovery networking
+
+22. Monitoring and Observability
+
+Flow log monitoring
+
+Network traffic analysis
+
+Integration with Amazon CloudWatch
+
+23. Security Best Practices
+
+Network isolation
+
+Least privilege networking
+
+Private endpoint usage
+
+Bastion host architecture
+
+24. Cost Optimization
+
+NAT gateway cost optimization
+
+Data transfer cost management
+
+Endpoint cost optimization
+
+25. Troubleshooting
+
+Connectivity troubleshooting
+
+Route table troubleshooting
+
+Security group troubleshooting
+
+VPN troubleshooting
