@@ -1,0 +1,233 @@
+Athena Fundamentals
+
+What is Athena
+
+Serverless query architecture
+
+Athena query engine (Presto / Trino)
+
+Schema-on-read concept
+
+Athena vs traditional databases
+
+Athena use cases and limitations
+
+2. Athena Core Architecture
+
+Query execution workflow
+
+Coordinator and worker nodes
+
+Distributed query processing
+
+Query result storage
+
+Query lifecycle
+
+Result reuse and caching
+
+3. Data Lake Architecture
+
+Data lake fundamentals
+
+Designing data lakes for analytics
+
+Data organization in Amazon S3
+
+Data lake zones (raw, processed, curated)
+
+Metadata management
+
+4. Metadata and Catalog
+
+AWS Glue Data Catalog overview
+
+Databases and tables
+
+Crawlers
+
+Schema inference
+
+Table partitions
+
+Table properties
+
+5. Data Formats and Compression
+
+CSV format
+
+JSON format
+
+Parquet format
+
+ORC format
+
+Avro format
+
+Columnar storage concepts
+
+Data compression techniques
+
+6. Partitioning and Performance Optimization
+
+Partitioning strategy
+
+Partition projection
+
+Bucketing
+
+Predicate pushdown
+
+Column pruning
+
+Query optimization techniques
+
+7. Athena SQL Capabilities
+
+DDL statements
+
+DML statements
+
+CTAS (Create Table As Select)
+
+Views
+
+Functions and operators
+
+Complex data types
+
+8. Security and Access Control
+
+IAM roles and policies
+
+S3 access permissions
+
+Encryption in Athena
+
+Workgroup level security
+
+Query result encryption
+
+9. Networking and Data Access
+
+VPC access to Athena
+
+Private endpoints
+
+Cross-account access
+
+S3 bucket policies
+
+10. Cost Management
+
+Athena pricing model
+
+Cost optimization strategies
+
+Data scanning reduction
+
+Query limits
+
+Workgroup cost control
+
+11. Monitoring and Troubleshooting
+
+Query history
+
+Query metrics
+
+CloudWatch integration
+
+Query failures and debugging
+
+12. Athena Workgroups
+
+Workgroup configuration
+
+Query limits
+
+Cost control policies
+
+Output location management
+
+13. Data Transformation
+
+CTAS queries
+
+INSERT INTO queries
+
+Data format conversion
+
+Partition creation using CTAS
+
+14. Integration with Other AWS Services
+
+Integration with AWS Glue
+
+Integration with Amazon QuickSight
+
+Integration with AWS Lambda
+
+Integration with Amazon Redshift
+
+Integration with Amazon Kinesis
+
+15. Federated Query
+
+Athena federated query architecture
+
+Querying external databases
+
+Connectors for external sources
+
+Lambda-based connectors
+
+16. Lakehouse Architecture
+
+Data lake vs lakehouse
+
+Athena with Iceberg tables
+
+Transactional tables
+
+ACID support in Athena
+
+17. Advanced Table Formats
+
+Apache Iceberg tables
+
+Table versioning
+
+Time travel queries
+
+Snapshot management
+
+18. Automation and Infrastructure
+
+Athena API usage
+
+Athena via SDK
+
+Infrastructure as code deployment
+
+Automated query execution
+
+19. Production Architecture Patterns
+
+Data lake analytics architecture
+
+Log analytics architecture
+
+IoT analytics architecture
+
+Batch analytics pipelines
+
+20. Best Practices
+
+Data layout best practices
+
+Query optimization best practices
+
+Cost optimization best practices
+
+Security best practices
