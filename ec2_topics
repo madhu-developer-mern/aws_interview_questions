@@ -1,0 +1,253 @@
+1. EC2 Basics
+
+What is Amazon EC2
+
+EC2 features
+
+Regions and Availability Zones
+
+Instance types overview
+
+EC2 pricing models
+
+2. Getting Started with EC2
+
+Launching an EC2 instance
+
+Connecting to instances
+
+Instance configuration
+
+Instance lifecycle management
+
+Terminating instances
+
+3. Amazon Machine Images (AMI)
+
+AMI basics
+
+Creating custom AMIs
+
+Copying AMIs
+
+Sharing AMIs
+
+AMI lifecycle management
+
+4. EC2 Instance Types
+
+Instance family overview
+
+General purpose instances
+
+Compute optimized instances
+
+Memory optimized instances
+
+Storage optimized instances
+
+Accelerated computing instances
+
+5. Instance Storage
+
+Instance store volumes
+
+Ephemeral storage
+
+Instance store performance
+
+6. EBS Integration
+
+Amazon Elastic Block Store overview
+
+EBS volume types
+
+Attaching and detaching volumes
+
+EBS snapshots
+
+EBS encryption
+
+EBS performance optimization
+
+7. Networking for EC2
+
+EC2 networking concepts
+
+Elastic Network Interfaces (ENI)
+
+Elastic IP addresses
+
+IPv4 and IPv6 addressing
+
+Placement groups
+
+Enhanced networking
+
+8. Security
+
+Security groups
+
+Key pairs
+
+IAM roles for EC2
+
+Instance identity roles
+
+Instance metadata service (IMDS)
+
+9. Monitoring
+
+EC2 monitoring overview
+
+Basic monitoring
+
+Detailed monitoring
+
+Metrics and alarms using Amazon CloudWatch
+
+10. Instance Lifecycle
+
+Start instance
+
+Stop instance
+
+Reboot instance
+
+Hibernate instance
+
+Terminate instance
+
+11. Instance Metadata
+
+Instance metadata service (IMDS)
+
+Metadata categories
+
+Accessing metadata from instance
+
+12. Instance Access
+
+SSH access (Linux)
+
+RDP access (Windows)
+
+EC2 Instance Connect
+
+Session Manager access
+
+13. Elastic Load Balancing Integration
+
+Load balancing concepts
+
+Integration with Elastic Load Balancing
+
+Health checks
+
+Target groups
+
+14. Auto Scaling
+
+Auto Scaling groups
+
+Launch templates
+
+Scaling policies
+
+Lifecycle hooks
+
+15. Placement Groups
+
+Cluster placement groups
+
+Partition placement groups
+
+Spread placement groups
+
+16. Capacity Management
+
+On-demand capacity
+
+Reserved instances
+
+Savings plans
+
+Spot instances
+
+Capacity reservations
+
+17. Spot Instances
+
+Spot instance lifecycle
+
+Spot pricing model
+
+Spot interruption handling
+
+Spot fleet
+
+18. Dedicated Infrastructure
+
+Dedicated instances
+
+Dedicated hosts
+
+Host resource management
+
+19. Hibernation
+
+Instance hibernation concept
+
+Hibernation requirements
+
+Resume operations
+
+20. Instance Maintenance
+
+Scheduled events
+
+Instance retirement
+
+Maintenance notifications
+
+21. Migration
+
+Instance migration strategies
+
+VM import/export
+
+Cross-region migration
+
+22. Fault Tolerance
+
+Multi-AZ deployment strategies
+
+Recovery strategies
+
+Instance recovery
+
+23. Backup and Recovery
+
+Snapshot backup strategies
+
+AMI backup strategies
+
+Disaster recovery
+
+24. Cost Management
+
+EC2 pricing components
+
+Cost optimization strategies
+
+Resource utilization optimization
+
+25. Troubleshooting
+
+Instance launch failures
+
+Connection failures
+
+Network troubleshooting
+
+Performance troubleshooting
