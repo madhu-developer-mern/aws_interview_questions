@@ -1,0 +1,422 @@
+Docker — Complete Concept Roadmap
+1. Docker Fundamentals
+- Containers
+- Images
+- Docker Engine
+- Docker Daemon
+- Docker Client
+- Docker CLI
+- Docker Architecture
+- Container Runtime
+- Docker Host
+- Docker Registry
+- Docker Hub
+- Image vs Container
+- Container vs Virtual Machine
+- Container Lifecycle
+2. Docker Installation & Environment
+- Docker Engine Installation
+- Docker Service
+- Docker Version
+- Docker Info
+- Docker Permissions
+- Docker Group
+- Docker Daemon Configuration
+- /var/lib/docker
+- Docker Disk Usage
+3. Container Basics
+- docker run
+- docker ps
+- docker ps -a
+- docker start
+- docker stop
+- docker restart
+- docker kill
+- docker rm
+- docker rename
+- Detached Mode
+- Interactive Mode
+- TTY
+- Container Naming
+- Container Exit Codes
+- Auto Remove (--rm)
+4. Working Inside Containers
+- docker exec
+- docker attach
+- Container Shell
+- /bin/bash
+- /bin/sh
+- Container Processes
+- docker top
+- docker inspect
+- docker logs
+- Log Following
+- Container Statistics
+- docker stats
+5. Docker Images
+- Image Layers
+- Read-only Layers
+- Writable Container Layer
+- Base Images
+- Image Tags
+- Image IDs
+- Image Digests
+- docker images
+- docker pull
+- docker push
+- docker rmi
+- docker tag
+- Image History
+- docker history
+- Dangling Images
+- Image Pruning
+6. Dockerfile
+- Dockerfile Structure
+- FROM
+- WORKDIR
+- COPY
+- ADD
+- RUN
+- CMD
+- ENTRYPOINT
+- ENV
+- ARG
+- EXPOSE
+- USER
+- VOLUME
+- LABEL
+- HEALTHCHECK
+- SHELL
+- .dockerignore
+- Build Context
+- Layer Caching
+- Build Cache
+- docker build
+- Build Arguments
+- Multi-stage Builds
+7. CMD vs ENTRYPOINT
+- Exec Form
+- Shell Form
+- Default Command
+- Runtime Arguments
+- Command Override
+- Entrypoint Override
+8. Container Networking
+- Docker Network
+- Container IP
+- Port Publishing
+- Port Mapping
+- -p
+- -P
+- Host Port
+- Container Port
+- localhost inside Containers
+- Container-to-Container Communication
+- DNS Resolution
+- Service Discovery
+9. Docker Network Drivers
+- Bridge Network
+- Default Bridge
+- User-defined Bridge
+- Host Network
+- None Network
+- Overlay Network
+- Macvlan
+- IPvlan
+- Network Isolation
+- docker network
+- Network Inspect
+- Connect/Disconnect Container
+10. Docker Storage
+- Container Filesystem
+- Ephemeral Storage
+- Persistent Storage
+- Volumes
+- Named Volumes
+- Anonymous Volumes
+- Bind Mounts
+- tmpfs Mounts
+- Volume Drivers
+- Volume Backup
+- Volume Restore
+- Volume Permissions
+- docker volume
+11. Environment & Configuration
+- Environment Variables
+- ENV
+- --env
+- --env-file
+- .env
+- Runtime Configuration
+- Secrets vs Environment Variables
+- Configuration Separation
+12. Resource Management
+- CPU Limits
+- CPU Shares
+- CPU Quotas
+- Memory Limits
+- Memory Reservations
+- Swap
+- OOM Kill
+- PID Limits
+- docker stats
+- Container Resource Monitoring
+This section is particularly important on your t3.small, because RAM is limited.
+13. Container Restart & Reliability
+- Restart Policies
+- no
+- always
+- unless-stopped
+- on-failure
+- Health Checks
+- Healthy
+- Unhealthy
+- Starting State
+- Dependency Health
+- Graceful Shutdown
+- SIGTERM
+- SIGKILL
+14. Docker Compose
+- Docker Compose
+- compose.yaml
+- Services
+- Images
+- Build
+- Ports
+- Volumes
+- Networks
+- Environment Variables
+- env_file
+- Dependencies
+- depends_on
+- Health Checks
+- Restart Policies
+- Profiles
+- Multiple Containers
+- Service Names
+- Internal DNS
+15. Docker Compose Commands
+- docker compose up
+- docker compose up -d
+- docker compose down
+- docker compose ps
+- docker compose logs
+- docker compose exec
+- docker compose build
+- docker compose pull
+- docker compose restart
+- docker compose stop
+- docker compose start
+- docker compose rm
+16. Multi-Container Architecture
+Practice:
+Nginx
+  ↓
+FastAPI
+  ↓
+MongoDB
+  ↓
+Redis
+
+Concepts:
+- Frontend Container
+- Backend Container
+- Database Container
+- Cache Container
+- Reverse Proxy Container
+- Internal Networks
+- External Ports
+- Persistent Volumes
+- Service Discovery
+17. Docker Registry
+- Registry
+- Repository
+- Docker Hub
+- Private Registry
+- Authentication
+- docker login
+- docker logout
+- Push
+- Pull
+- Image Tags
+- Semantic Versioning
+- latest Tag
+- Immutable Tags
+- Image Digest
+- Private Docker Registry
+18. Docker Security
+- Root vs Non-root Container
+- USER
+- Linux Capabilities
+- --cap-add
+- --cap-drop
+- Privileged Containers
+- Read-only Filesystem
+- Secrets
+- Environment Variable Security
+- Image Vulnerability Scanning
+- Minimal Base Images
+- Docker Socket Security
+- Container Isolation
+- Seccomp
+- AppArmor
+- Namespaces
+- Control Groups (cgroups)
+19. Docker Internals
+- Docker Daemon
+- Docker API
+- containerd
+- runc
+- OCI
+- OCI Image Specification
+- OCI Runtime Specification
+- Linux Namespaces
+- PID Namespace
+- Network Namespace
+- Mount Namespace
+- User Namespace
+- UTS Namespace
+- IPC Namespace
+- cgroups
+- Union Filesystem
+- OverlayFS
+- Copy-on-Write
+20. Image Optimization
+- Small Base Images
+- Alpine Images
+- Slim Images
+- Multi-stage Builds
+- Layer Optimization
+- Build Cache Optimization
+- .dockerignore
+- Dependency Caching
+- Image Size Reduction
+- BuildKit
+21. Logging
+- STDOUT
+- STDERR
+- docker logs
+- Logging Drivers
+- json-file
+- Log Rotation
+- Log Size Limits
+- Centralized Logging Concepts
+22. Troubleshooting
+- Container Exits Immediately
+- Container Restart Loop
+- Port Already in Use
+- Permission Denied
+- Cannot Connect Between Containers
+- DNS Problems
+- Volume Permission Problems
+- OOMKilled
+- Disk Full
+- Large Docker Logs
+- Image Pull Failure
+- Build Cache Problems
+- Container Health Check Failure
+- docker inspect
+- docker events
+- docker stats
+- docker system df
+23. Docker Cleanup
+- Stopped Containers
+- Unused Images
+- Dangling Images
+- Unused Networks
+- Unused Volumes
+- Build Cache
+- docker prune
+- docker container prune
+- docker image prune
+- docker volume prune
+- docker network prune
+- docker system prune
+24. Docker Production Concepts
+- Development vs Production Images
+- Immutable Containers
+- Stateless Containers
+- Stateful Containers
+- Persistent Data
+- Configuration Management
+- Secrets Management
+- Health Checks
+- Restart Policies
+- Resource Limits
+- Log Rotation
+- Graceful Shutdown
+- Zero/Low-Downtime Deployment Concepts
+- Rolling Updates
+- Rollback
+- Image Versioning
+- Container Replicas
+- Load Balancing
+- Reverse Proxy
+- TLS/HTTPS
+25. Nginx + Docker
+- Reverse Proxy
+- Upstream
+- Container DNS
+- Load Balancing
+- SSL/TLS Termination
+- HTTP → HTTPS
+- Multiple Backend Containers
+- Nginx Configuration Mounts
+26. Docker CI/CD
+- Git
+- GitHub
+- Jenkins
+- Docker Build
+- Automated Tests
+- Image Tagging
+- Registry Authentication
+- Image Push
+- Deployment
+- Container Replacement
+- Rollback
+- Build Number Tags
+- Git Commit SHA Tags
+27. Advanced Build
+- BuildKit
+- docker buildx
+- Multi-platform Images
+- linux/amd64
+- linux/arm64
+- Build Secrets
+- Cache Mounts
+- Remote Cache
+- Multi-stage Production Builds
+28. Docker Swarm
+- Swarm Mode
+- Cluster
+- Manager Node
+- Worker Node
+- Services
+- Tasks
+- Replicas
+- Desired State
+- Overlay Networks
+- Service Discovery
+- Routing Mesh
+- Rolling Updates
+- Rollbacks
+- Scaling
+- Node Availability
+- Manager Quorum
+- Docker Secrets
+- Docker Configs
+29. Production High Availability Concepts
+- Multiple Docker Hosts
+- Container Replicas
+- Load Balancer
+- Health Checks
+- Failure Recovery
+- Node Failure
+- Container Failure
+- Horizontal Scaling
+- Rolling Deployment
+- Blue/Green Deployment
+- Canary Deployment
+- Stateless Architecture
+- External Database
+- Shared Storage
