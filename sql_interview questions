@@ -1,0 +1,893 @@
+. Introduction to SQL
+- What is SQL?
+- SQL vs NoSQL
+- DBMS vs RDBMS
+- Relational database concepts
+- SQL standards (ANSI SQL)
+- SQL dialects: MySQL, PostgreSQL, SQL Server, Oracle, SQLite
+- Database, schema, table, row, and column
+- Primary key and foreign key
+- Data types
+- SQL query execution basics
+- SQL command categories: DDL, DML, DQL, DCL, TCL
+2. SQL Data Types
+- INTEGER, SMALLINT, BIGINT
+- DECIMAL, NUMERIC, FLOAT, REAL, DOUBLE PRECISION
+- CHAR, VARCHAR, TEXT
+- BOOLEAN
+- DATE, TIME, TIMESTAMP
+- TIMESTAMP WITH TIME ZONE
+- INTERVAL
+- BINARY and BLOB types
+- UUID
+- JSON and JSONB
+- ENUM
+- ARRAY
+- NULL and unknown values
+- Type casting and conversion
+3. DDL — Data Definition Language
+- CREATE DATABASE
+- CREATE SCHEMA
+- CREATE TABLE
+- ALTER TABLE
+- DROP TABLE
+- TRUNCATE TABLE
+- RENAME TABLE
+- ADD COLUMN
+- DROP COLUMN
+- RENAME COLUMN
+- ALTER COLUMN TYPE
+- CREATE TABLE AS SELECT
+- IF EXISTS / IF NOT EXISTS
+- DEFAULT values
+- Generated/identity columns
+- Table constraints
+4. DML — Data Manipulation Language
+- INSERT INTO
+- INSERT multiple rows
+- INSERT INTO SELECT
+- UPDATE
+- UPDATE with conditions
+- UPDATE using JOIN / FROM
+- DELETE
+- DELETE using JOIN / USING
+- UPSERT
+- INSERT ON CONFLICT (PostgreSQL)
+- MERGE
+- RETURNING clause
+- Bulk data modifications
+5. SELECT Query Fundamentals
+- SELECT
+- SELECT *
+- SELECT DISTINCT
+- FROM
+- WHERE
+- ORDER BY
+- ASC and DESC
+- LIMIT
+- OFFSET
+- FETCH FIRST / FETCH NEXT
+- Column aliases (AS)
+- Table aliases
+- SELECT expressions
+- Computed columns
+- Literal values
+- Query formatting
+6. SQL Operators and Filtering
+- Arithmetic operators (+, -, *, /, %)
+- Comparison operators (=, !=, <, >, <=, >=)
+- Logical operators (AND, OR, NOT)
+- Operator precedence
+- BETWEEN / NOT BETWEEN
+- IN / NOT IN
+- LIKE / NOT LIKE
+- ILIKE (PostgreSQL)
+- Wildcards (% and _)
+- IS NULL / IS NOT NULL
+- IS DISTINCT FROM
+- ANY / ALL
+- EXISTS / NOT EXISTS
+- Regular expressions
+- Three-valued logic (TRUE, FALSE, UNKNOWN)
+7. SQL Functions — Basic
+- COUNT()
+- SUM()
+- AVG()
+- MIN()
+- MAX()
+- ROUND()
+- CEIL() / CEILING()
+- FLOOR()
+- ABS()
+- MOD()
+- COALESCE()
+- NULLIF()
+- CAST()
+- CONCAT()
+- UPPER()
+- LOWER()
+- LENGTH()
+- TRIM()
+- SUBSTRING()
+- REPLACE()
+
+LEVEL 2 — INTERMEDIATE
+ Query Writing
+8. Aggregate Functions and Grouping
+- Aggregate functions
+- GROUP BY
+- GROUP BY multiple columns
+- HAVING
+- WHERE vs HAVING
+- COUNT(*) vs COUNT(column)
+- COUNT(DISTINCT)
+- SUM with conditions
+- AVG with conditions
+- Conditional aggregation
+- CASE WHEN inside aggregates
+- FILTER clause (PostgreSQL)
+- Grouping NULL values
+- Aggregate functions with JOIN
+- Aggregate functions with subqueries
+- Aggregate functions with DISTINCT
+9. SQL Joins
+- INNER JOIN
+- LEFT JOIN
+- RIGHT JOIN
+- FULL OUTER JOIN
+- CROSS JOIN
+- SELF JOIN
+- NATURAL JOIN
+- Equi JOIN
+- Non-equi JOIN
+- Multiple-table joins
+- Joining three or more tables
+- JOIN with multiple conditions
+- JOIN with aggregation
+- JOIN with subqueries
+- JOIN vs subquery
+- Semi joins
+- Anti joins
+- Join cardinality
+- Duplicate records caused by JOIN
+- INNER vs OUTER JOIN filtering
+- ON vs WHERE in outer joins
+10. SQL Subqueries
+- What is a subquery?
+- Scalar subquery
+- Single-row subquery
+- Multiple-row subquery
+- Multiple-column subquery
+- Correlated subquery
+- Non-correlated subquery
+- Nested subquery
+- Subquery in SELECT
+- Subquery in FROM
+- Subquery in WHERE
+- Subquery in HAVING
+- Subquery with IN
+- Subquery with EXISTS
+- Subquery with NOT EXISTS
+- Subquery with ANY / ALL
+- Subquery vs JOIN
+- Subquery optimization
+11. Set Operations
+- UNION
+- UNION ALL
+- INTERSECT
+- INTERSECT ALL
+- EXCEPT
+- EXCEPT ALL
+- UNION vs UNION ALL
+- Duplicate elimination
+- Set operations with ORDER BY
+- Combining multiple SELECT queries
+- Column compatibility in set operations
+12. Conditional Logic
+- CASE expression
+- Simple CASE
+- Searched CASE
+- Nested CASE
+- CASE in SELECT
+- CASE in WHERE
+- CASE in ORDER BY
+- CASE inside SUM()
+- CASE inside COUNT()
+- COALESCE
+- NULLIF
+- GREATEST / LEAST
+- Conditional sorting
+- Conditional aggregation
+13. String Functions
+- CONCAT()
+- CONCAT_WS()
+- UPPER() / LOWER()
+- INITCAP()
+- LENGTH()
+- CHAR_LENGTH()
+- TRIM() / LTRIM() / RTRIM()
+- SUBSTRING()
+- LEFT() / RIGHT()
+- POSITION()
+- REPLACE()
+- SPLIT_PART()
+- LPAD() / RPAD()
+- REPEAT()
+- STRING_AGG()
+- Pattern matching
+- Regular expressions
+14. Date and Time Functions
+- CURRENT_DATE
+- CURRENT_TIME
+- CURRENT_TIMESTAMP
+- NOW()
+- EXTRACT()
+- DATE_TRUNC()
+- AGE() (PostgreSQL)
+- INTERVAL
+- Date arithmetic
+- Date comparison
+- Date formatting
+- Date parsing
+- Timezone conversion
+- TIMESTAMP vs TIMESTAMPTZ
+- Date range filtering
+- Group by day, week, month, year
+- Rolling date windows
+- Date series generation
+- Handling UTC timestamps
+- Daylight saving time
+15. Common Table Expressions (CTEs)
+- WITH clause
+- Single CTE
+- Multiple CTEs
+- Chained CTEs
+- CTE vs subquery
+- CTE vs temporary table
+- CTE with JOIN
+- CTE with aggregation
+- CTE with INSERT / UPDATE / DELETE
+- Recursive CTE
+- Recursive anchor query
+- Recursive member query
+- Recursive termination condition
+- Hierarchical data queries
+- Employee-manager hierarchy
+- Tree traversal
+- Graph traversal basics
+- Recursive cycle detection
+- CTE materialization and optimization
+
+LEVEL 3 — ADVANCED
+ Complex SQL
+16. Window Functions
+- What are window functions?
+- OVER()
+- PARTITION BY
+- ORDER BY inside OVER()
+- ROW_NUMBER()
+- RANK()
+- DENSE_RANK()
+- NTILE()
+- LAG()
+- LEAD()
+- FIRST_VALUE()
+- LAST_VALUE()
+- NTH_VALUE()
+- SUM() OVER()
+- AVG() OVER()
+- COUNT() OVER()
+- MIN() / MAX() OVER()
+- Running total
+- Running average
+- Cumulative sum
+- Moving average
+- Rolling window
+- Difference between consecutive rows
+- Ranking within groups
+- Top N per group
+- Window frames
+- ROWS BETWEEN
+- RANGE BETWEEN
+- GROUPS BETWEEN
+- UNBOUNDED PRECEDING
+- CURRENT ROW
+- UNBOUNDED FOLLOWING
+- Window frame exclusion
+- Named windows
+- Window functions vs GROUP BY
+- Window function filtering using CTEs
+17. Advanced Aggregation
+- GROUPING SETS
+- ROLLUP
+- CUBE
+- GROUPING()
+- GROUPING_ID() (database-dependent)
+- Multi-level aggregation
+- Hierarchical summaries
+- Subtotals and grand totals
+- Conditional distinct counts
+- Percentage of total
+- Weighted averages
+- Median and percentiles
+- PERCENTILE_CONT()
+- PERCENTILE_DISC()
+- Statistical aggregates
+- ARRAY_AGG()
+- JSON_AGG()
+- STRING_AGG()
+- Ordered-set aggregates
+- Pivoting using conditional aggregation
+- Unpivoting data
+18. Advanced Query Techniques
+- Top N per department/category
+- Nth highest salary
+- Duplicate detection
+- Duplicate removal
+- Latest record per group
+- First and last record per group
+- Consecutive records
+- Gaps and islands problem
+- Missing sequence detection
+- Running balances
+- Cumulative percentages
+- Sessionization
+- Event sequence analysis
+- Cohort analysis
+- Retention calculations
+- Funnel analysis
+- Year-over-year comparison
+- Month-over-month comparison
+- Recursive hierarchy queries
+- Relational division
+- Greatest-N-per-group
+- Anti-join patterns
+- Deduplication with window functions
+- Finding overlapping intervals
+- Date range merging
+- As-of joins
+- LATERAL JOIN
+- DISTINCT ON (PostgreSQL)
+19. Views and Materialized Views
+- CREATE VIEW
+- ALTER VIEW
+- DROP VIEW
+- Simple views
+- Complex views
+- Views with JOIN
+- Views with aggregation
+- Updatable views
+- WITH CHECK OPTION
+- Materialized views
+- REFRESH MATERIALIZED VIEW
+- Concurrent materialized view refresh
+- Views vs CTEs
+- Views vs materialized views
+- Indexed views (SQL Server)
+- Security considerations for views
+
+LEVEL 4 — DATABASE DESIGN
+ Relational Modeling
+20. Keys and Constraints
+- PRIMARY KEY
+- FOREIGN KEY
+- UNIQUE
+- NOT NULL
+- CHECK
+- DEFAULT
+- Composite primary keys
+- Candidate keys
+- Super keys
+- Alternate keys
+- Surrogate keys
+- Natural keys
+- Referential integrity
+- ON DELETE CASCADE
+- ON DELETE SET NULL
+- ON DELETE RESTRICT
+- ON UPDATE CASCADE
+- Deferred constraints
+- Exclusion constraints (PostgreSQL)
+21. Database Relationships
+- One-to-one
+- One-to-many
+- Many-to-many
+- Junction tables
+- Parent-child relationships
+- Self-referencing relationships
+- Identifying vs non-identifying relationships
+- Optional vs mandatory relationships
+- Referential integrity
+- ER diagrams
+- Relationship cardinality
+- Relationship participation
+22. Database Normalization
+- Functional dependencies
+- Partial dependencies
+- Transitive dependencies
+- First Normal Form (1NF)
+- Second Normal Form (2NF)
+- Third Normal Form (3NF)
+- Boyce-Codd Normal Form (BCNF)
+- Fourth Normal Form (4NF)
+- Fifth Normal Form (5NF)
+- Denormalization
+- Normalization vs performance
+- Insertion anomalies
+- Update anomalies
+- Deletion anomalies
+- Lossless decomposition
+- Dependency preservation
+23. Practical Schema Design
+- OLTP schema design
+- OLAP schema design
+- Star schema
+- Snowflake schema
+- Fact tables
+- Dimension tables
+- Slowly changing dimensions
+- Audit tables
+- History tables
+- Soft delete
+- Hard delete
+- Status-based modeling
+- Multi-tenant schema design
+- Shared-schema vs separate-schema tenancy
+- UUID vs auto-increment IDs
+- Composite keys vs surrogate keys
+- Temporal data modeling
+- Adjacency-list hierarchy
+- Closure-table hierarchy
+- Materialized-path hierarchy
+- Index-aware schema design
+
+LEVEL 5 — TRANSACTIONS AND CONCURRENCY
+
+24. Transactions
+- BEGIN / START TRANSACTION
+- COMMIT
+- ROLLBACK
+- SAVEPOINT
+- ROLLBACK TO SAVEPOINT
+- Transaction boundaries
+- Autocommit
+- Transaction atomicity
+- ACID properties
+- Atomicity
+- Consistency
+- Isolation
+- Durability
+- Transaction failure handling
+- Long-running transactions
+25. Concurrency Control
+- Concurrent transactions
+- Lost update
+- Dirty read
+- Non-repeatable read
+- Phantom read
+- Write skew
+- Read skew
+- Isolation levels
+- READ UNCOMMITTED
+- READ COMMITTED
+- REPEATABLE READ
+- SERIALIZABLE
+- MVCC (Multi-Version Concurrency Control)
+- Optimistic locking
+- Pessimistic locking
+- Row-level locking
+- Table-level locking
+- SELECT FOR UPDATE
+- SELECT FOR SHARE
+- NOWAIT
+- SKIP LOCKED
+- Deadlocks
+- Deadlock detection
+- Lock timeouts
+- Serialization failures and retries
+- Idempotent transactions
+26. Real-World Transaction Problems
+- Double booking prevention
+- Banking money transfers
+- Inventory reservation
+- Seat booking concurrency
+- Preventing duplicate payments
+- Distributed transaction limitations
+- Transactional outbox pattern
+- Idempotency keys
+- Exactly-once effect design
+- Optimistic version checking
+- Unique-constraint-based concurrency protection
+- Safe retry handling
+
+LEVEL 6 — PERFORMANCE OPTIMIZATION
+
+27. Indexing
+- What is an index?
+- Primary key index
+- Unique index
+- Composite index
+- Multi-column index
+- B-tree index
+- Hash index
+- Partial index
+- Expression/function-based index
+- Covering index
+- Index-only scan
+- Descending index
+- Index selectivity
+- Cardinality
+- Index column order
+- Index prefix usage
+- Index intersection
+- Clustered vs non-clustered indexes
+- GIN index (PostgreSQL)
+- GiST index (PostgreSQL)
+- BRIN index (PostgreSQL)
+- SP-GiST index (PostgreSQL)
+- Bitmap index concepts
+- Index bloat
+- Index maintenance
+- Unused indexes
+- Over-indexing
+28. Query Execution and Optimization
+- SQL logical execution order
+- SQL physical execution
+- SQL query parser
+- Query planner
+- Query optimizer
+- Cost-based optimization
+- Rule-based optimization
+- EXPLAIN
+- EXPLAIN ANALYZE
+- Execution plans
+- Sequential scan
+- Index scan
+- Index-only scan
+- Bitmap heap scan
+- Nested loop join
+- Hash join
+- Merge join
+- Sort operations
+- Hash aggregation
+- Group aggregation
+- Predicate pushdown
+- Filter pushdown
+- Join reordering
+- Cardinality estimation
+- Table statistics
+- Query cost estimation
+- Parallel query execution
+- Memory usage during queries
+- Temporary disk spills
+- Query plan regressions
+29. SQL Performance Tuning
+- Identifying slow queries
+- Avoiding SELECT *
+- Avoiding N+1 queries
+- JOIN optimization
+- Subquery optimization
+- CTE optimization
+- Pagination optimization
+- Keyset vs OFFSET pagination
+- Filtering before expensive operations
+- Aggregation optimization
+- Efficient ORDER BY
+- Efficient GROUP BY
+- Efficient DISTINCT
+- EXISTS vs IN
+- UNION vs UNION ALL
+- SARGable predicates
+- Reducing full-table scans
+- Reducing sort operations
+- Index tuning
+- Batch updates
+- Bulk insert optimization
+- Connection pooling
+- Prepared statements
+- Parameterized queries
+- Table statistics maintenance
+- Query benchmarking
+
+LEVEL 7 — ADVANCED DATABASE FEATURES
+
+30. Stored Procedures and Functions
+- Stored procedures
+- User-defined functions
+- Scalar functions
+- Table-valued functions
+- Function parameters
+- IN / OUT / INOUT parameters
+- RETURN values
+- SQL functions
+- Procedural SQL
+- PL/pgSQL (PostgreSQL)
+- Variables
+- IF / ELSE
+- LOOP
+- WHILE
+- FOR
+- Cursors
+- Exception handling
+- Dynamic SQL
+- EXECUTE
+- Function volatility
+- Security definer functions
+- Function performance
+31. Triggers
+- CREATE TRIGGER
+- BEFORE trigger
+- AFTER trigger
+- INSTEAD OF trigger
+- INSERT triggers
+- UPDATE triggers
+- DELETE triggers
+- Row-level triggers
+- Statement-level triggers
+- Trigger functions
+- OLD and NEW records
+- Audit logging triggers
+- Automatic timestamp triggers
+- Trigger recursion
+- Trigger performance
+- Trigger execution order
+32. Temporary Tables and Advanced Table Features
+- Temporary tables
+- Global vs local temporary tables (dialect-specific)
+- Common table expressions
+- Unlogged tables (PostgreSQL)
+- Generated columns
+- Identity columns
+- Sequence objects
+- CREATE SEQUENCE
+- NEXTVAL()
+- CURRVAL()
+- Temporary vs permanent storage
+- Table inheritance (PostgreSQL)
+- Foreign tables
+- Foreign Data Wrappers
+- External data access
+33. Partitioning and Sharding
+- Horizontal partitioning
+- Vertical partitioning
+- Range partitioning
+- List partitioning
+- Hash partitioning
+- Partition pruning
+- Partition keys
+- Partition indexing
+- Partition maintenance
+- Time-based partitioning
+- Hot vs cold partitions
+- Database sharding
+- Shard keys
+- Data distribution
+- Consistent hashing concepts
+- Rebalancing shards
+- Cross-shard joins
+- Distributed query challenges
+
+LEVEL 8 — POSTGRESQL ADVANCED
+
+34. PostgreSQL-Specific SQL
+- PostgreSQL architecture basics
+- Schemas and search_path
+- SERIAL vs IDENTITY
+- UUID generation
+- JSON
+- JSONB
+- JSONB operators
+- JSON path queries
+- JSONB indexing
+- Arrays
+- Array operators
+- Array aggregation
+- UNNEST()
+- generate_series()
+- LATERAL JOIN
+- DISTINCT ON
+- RETURNING
+- INSERT ON CONFLICT
+- FILTER clause
+- Range types
+- Multirange types
+- Exclusion constraints
+- ENUM types
+- Composite types
+- Domains
+- Extensions
+- PostgreSQL full-text search
+- TSVECTOR
+- TSQUERY
+- pg_trgm
+- PostGIS basics
+- Vector search with pgvector
+35. PostgreSQL Internals
+- PostgreSQL process architecture
+- Shared buffers
+- WAL (Write-Ahead Logging)
+- WAL segments
+- Checkpoints
+- Background writer
+- WAL writer
+- Autovacuum
+- VACUUM
+- VACUUM FULL
+- ANALYZE
+- Table bloat
+- Index bloat
+- MVCC tuple versions
+- Dead tuples
+- Visibility maps
+- Free space maps
+- Heap storage
+- TOAST storage
+- Transaction IDs
+- Transaction ID wraparound
+- PostgreSQL system catalogs
+- pg_stat_activity
+- pg_stat_statements
+- pg_locks
+- pg_stat_user_tables
+- pg_stat_user_indexes
+36. PostgreSQL Administration
+- Role creation
+- User creation
+- Database ownership
+- Schema permissions
+- GRANT / REVOKE
+- ALTER DEFAULT PRIVILEGES
+- Connection limits
+- Connection pooling
+- PgBouncer
+- PostgreSQL configuration
+- postgresql.conf
+- pg_hba.conf
+- Logging configuration
+- Slow query logging
+- Statement timeout
+- Lock timeout
+- Idle transaction timeout
+- Database monitoring
+- pg_dump
+- pg_restore
+- pg_basebackup
+- Backup validation
+- Point-in-time recovery
+- WAL archiving
+- PostgreSQL upgrades
+
+LEVEL 9 — EXPERT / PRODUCTION SQL
+
+37. Replication and High Availability
+- Primary-replica architecture
+- Streaming replication
+- Physical replication
+- Logical replication
+- Synchronous replication
+- Asynchronous replication
+- Replication slots
+- Replication lag
+- Read replicas
+- Read-write splitting
+- Failover
+- Automatic failover
+- Replication conflicts
+- High availability design
+- Recovery Point Objective (RPO)
+- Recovery Time Objective (RTO)
+- Disaster recovery planning
+38. Database Security
+- Authentication
+- Authorization
+- Roles and permissions
+- GRANT
+- REVOKE
+- Role inheritance
+- Row-Level Security (RLS)
+- Column-level privileges
+- Least privilege
+- SQL injection
+- Parameterized queries
+- Prepared statements
+- Dynamic SQL security
+- Encryption at rest
+- Encryption in transit
+- TLS connections
+- Database audit logging
+- Data masking
+- Personally identifiable information protection
+- Secret management
+- Multi-tenant data isolation
+39. Distributed SQL and Scaling
+- Vertical scaling
+- Horizontal scaling
+- Read scaling
+- Write scaling
+- Replication strategies
+- Sharding strategies
+- Distributed transactions
+- Two-phase commit
+- Distributed consistency
+- CAP theorem
+- Strong consistency
+- Eventual consistency
+- Distributed SQL architecture
+- Cross-region replication
+- Geo-distributed databases
+- Distributed deadlocks
+- Distributed query planning
+- Data locality
+40. SQL in Real-World Applications
+- User management systems
+- Authentication database design
+- E-commerce order management
+- Inventory management
+- Payment transaction systems
+- Booking and reservation systems
+- Wallet and ledger systems
+- Banking transaction systems
+- Audit trails
+- Soft-delete architecture
+- Multi-tenancy
+- Pagination at scale
+- Reporting queries
+- Search and filtering APIs
+- Analytics dashboards
+- Event-data storage
+- IoT time-series queries
+- Migration management
+- Zero-downtime schema changes
+- Database versioning
+- Data retention and archival
+
+LEVEL 10 — SQL PROBLEM-SOLVING MASTERY
+
+41. SQL Query Problem-Solving Techniques
+- Understanding the input tables
+- Identifying expected output
+- Determining query granularity
+- Identifying table relationships
+- Determining required JOIN types
+- Translating business requirements into predicates
+- Identifying aggregation requirements
+- Choosing GROUP BY vs window functions
+- Identifying row-level vs group-level conditions
+- Breaking complex queries into CTEs
+- Handling NULL correctly
+- Handling duplicates and ties
+- Choosing between JOIN, EXISTS, and subquery
+- Writing queries incrementally
+- Validating intermediate results
+- Testing edge cases
+- Reading EXPLAIN plans
+- Comparing alternative query solutions
+- Verifying correctness before optimizing
+42. Essential SQL Interview Problem Patterns
+- Maximum/minimum per group
+- Nth highest value
+- Top K per group
+- Duplicate identification and removal
+- Consecutive days/events
+- Gaps and islands
+- Missing IDs
+- Employee-manager hierarchy
+- Running totals
+- Moving averages
+- Percentage of total
+- Median calculation
+- Customer retention
+- Monthly active users
+- Churn rate
+- First and repeat purchases
+- Users without orders
+- Products never sold
+- Customers who purchased all products
+- Latest transaction per customer
+- Overlapping booking detection
+- Interval merging
+- Sessionization
+- Cohort analysis
+- Revenue ranking
+- Complex multi-table reporting
+- Recursive tree traversal
