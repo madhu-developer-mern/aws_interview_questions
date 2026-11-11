@@ -1,0 +1,141 @@
+AWS Services
+1. Networking
+1. Amazon VPC
+2. VPC Subnets
+3. Route Tables
+4. Internet Gateway
+5. NAT Gateway
+6. Security Groups
+7. Network ACLs
+8. Elastic IP
+9. VPC Endpoints
+10. Elastic Load Balancing (ALB)
+11. Elastic Load Balancing (NLB)
+12. Gateway Load Balancer (GWLB)
+13. Amazon Route 53
+14. Amazon CloudFront
+2. Compute
+15. Amazon EC2
+16. Amazon EC2 Auto Scaling
+17. AWS Lambda
+3. Storage
+18. Amazon S3
+19. Amazon EBS
+20. Amazon EFS
+21. Amazon S3 Glacier Storage Classes
+4. Databases
+22. Amazon RDS
+23. Amazon Aurora
+24. Amazon DynamoDB
+5. Security and Identity
+25. AWS IAM
+26. AWS KMS
+27. AWS Secrets Manager
+28. AWS Certificate Manager (ACM)
+6. API and Messaging
+29. Amazon API Gateway
+30. Amazon SQS
+31. Amazon SNS
+32. Amazon EventBridge
+33. AWS Step Functions
+7. Monitoring
+34. Amazon CloudWatch
+35. AWS CloudTrail
+8. Infrastructure as Code
+36. AWS CloudFormation
+9. Cost Management
+37. AWS Cost Explorer
+38. AWS Budgets
+10. Containers
+39. Amazon ECS
+40. Amazon EKS
+41. AWS Fargate
+42. Amazon ECR
+11. Advanced Networking
+43. AWS Transit Gateway
+44. AWS PrivateLink
+45. AWS Direct Connect
+46. AWS Site-to-Site VPN
+47. AWS Global Accelerator
+48. AWS Network Firewall
+12. Advanced Databases
+49. Amazon ElastiCache
+50. Amazon DocumentDB
+51. Amazon Redshift
+52. Amazon MemoryDB
+53. Amazon Neptune
+54. Amazon Timestream
+13. Advanced Security
+55. AWS WAF
+56. AWS Shield
+57. Amazon GuardDuty
+58. Amazon Cognito
+59. Amazon Inspector
+60. AWS Security Hub
+61. Amazon Macie
+14. Governance
+62. AWS Organizations
+63. AWS Control Tower
+64. AWS Config
+65. AWS IAM Identity Center
+66. AWS Resource Access Manager (RAM)
+15. Infrastructure Management
+67. AWS Systems Manager
+68. AWS Backup
+69. AWS Trusted Advisor
+70. AWS Compute Optimizer
+71. AWS Health
+16. Migration
+72. AWS Database Migration Service (DMS)
+73. AWS DataSync
+74. AWS Storage Gateway
+75. AWS Application Migration Service
+76. AWS Transfer Family
+17. Data Engineering and Analytics
+77. AWS Glue
+78. AWS Glue Data Catalog
+79. AWS Glue Crawlers
+80. AWS Glue ETL Jobs
+81. AWS Glue Data Quality
+82. Amazon Athena
+83. Amazon EMR
+84. Amazon Kinesis Data Streams
+85. Amazon Data Firehose
+86. AWS Lake Formation
+87. Amazon MSK
+88. Amazon Managed Service for Apache Flink
+89. Amazon MWAA
+90. Amazon Redshift Serverless
+91. Amazon OpenSearch Service
+92. Amazon Quick
+93. Amazon S3 Tables
+94. Amazon DataZone
+18. Additional Compute
+95. AWS Elastic Beanstalk
+96. AWS Batch
+97. AWS App Runner
+19. Advanced Storage
+98. Amazon FSx
+99. Amazon S3 Replication
+100. Amazon S3 Lifecycle Management
+101. AWS Snow Family
+20. DevOps and CI/CD
+102. AWS CodePipeline
+103. AWS CodeBuild
+104. AWS CodeDeploy
+105. AWS Cloud Development Kit (CDK)
+106. AWS CloudShell
+21. Additional Application Integration
+107. Amazon MQ
+108. AWS AppSync
+109. Amazon SES
+22. Advanced Cost Management
+110. AWS Cost and Usage Reports
+111. AWS Cost Anomaly Detection
+112. AWS Savings Plans
+23. AI and Machine Learning
+113. Amazon Bedrock
+114. Amazon SageMaker AI
+115. Amazon Textract
+116. Amazon Rekognition
+117. Amazon Comprehend
