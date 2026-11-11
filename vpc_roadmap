@@ -1,0 +1,168 @@
+Phase 1: Networking Fundamentals
+1. Computer Networking Basics
+2. LAN, WAN, Routers, Switches and Gateways
+3. IPv4 and IPv6 Addressing
+4. Public IP vs Private IP
+5. Static IP vs Dynamic IP
+6. Subnet Masks and CIDR Notation
+7. CIDR Calculations (/16, /20, /24, /28)
+8. Subnetting and IP Address Planning
+9. TCP vs UDP and Port Numbers
+10. DNS and Domain Resolution
+11. NAT, Firewalls and Routing Fundamentals
+12. How Network Packets Travel
+Phase 2: AWS VPC Fundamentals
+13. What Is Amazon VPC?
+14. Why Do We Need a VPC?
+15. Default VPC vs Custom VPC
+16. VPC Components and Architecture
+17. VPC CIDR Blocks and Secondary CIDRs
+18. AWS Reserved IP Addresses
+19. VPC Regional Scope and Availability Zones
+20. IPv4 vs IPv6 in AWS VPC
+Phase 3: Subnets
+21. What Is a Subnet?
+22. Public Subnet
+23. Private Subnet
+24. Isolated Subnet
+25. Public vs Private vs Isolated Subnets
+26. Subnet CIDR Planning
+27. Multi-AZ Subnet Architecture
+28. Subnet IP Exhaustion and Scaling
+29. Subnet Design for Production Workloads
+Phase 4: Routing and Internet Connectivity
+30. What Is a Route Table?
+31. Main vs Custom Route Tables
+32. Subnet Route Table Associations
+33. Local Routes and Default Routes
+34. Longest Prefix Match Routing
+35. Internet Gateway (IGW)
+36. Elastic IP Addresses
+37. NAT Gateway
+38. Public vs Private NAT Gateway
+39. NAT Gateway vs NAT Instance
+40. Egress-Only Internet Gateway for IPv6
+41. Inbound vs Outbound Network Traffic
+42. How Private Subnets Access the Internet
+Phase 5: VPC Security
+43. Security Groups
+44. Inbound and Outbound Security Group Rules
+45. Security Group Referencing
+46. Network Access Control Lists (NACLs)
+47. Stateful vs Stateless Firewalls
+48. Security Groups vs NACLs
+49. Ephemeral Ports and Return Traffic
+50. VPC Traffic Isolation
+51. Least-Privilege Network Security
+52. Network Firewall and Egress Filtering
+Phase 6: VPC Endpoints and Private Connectivity
+53. What Are VPC Endpoints?
+54. Gateway Endpoints
+55. Interface Endpoints
+56. AWS PrivateLink
+57. S3 Gateway Endpoint
+58. DynamoDB Gateway Endpoint
+59. Private Access to SQS, Secrets Manager and CloudWatch
+60. VPC Endpoints vs NAT Gateway
+61. Endpoint Policies and Private DNS
+62. Reducing NAT Gateway Costs with VPC Endpoints
+Phase 7: VPC-to-VPC Networking
+63. What Is VPC Peering?
+64. Same-Region VPC Peering
+65. Cross-Region VPC Peering
+66. VPC Peering Routing and Limitations
+67. AWS Transit Gateway
+68. Transit Gateway Attachments and Route Tables
+69. Hub-and-Spoke Network Architecture
+70. Transit Gateway vs VPC Peering
+71. Shared VPC with AWS RAM
+72. Multi-Account VPC Architecture
+Phase 8: Hybrid Networking
+73. Site-to-Site VPN
+74. Virtual Private Gateway
+75. Customer Gateway
+76. AWS Direct Connect
+77. Direct Connect Gateway
+78. AWS Client VPN
+79. VPN vs Direct Connect
+80. BGP Routing Basics
+81. On-Premises to AWS Connectivity
+82. Hybrid Cloud Network Design
+Phase 9: DNS and Advanced Networking
+83. Amazon VPC DNS
+84. Route 53 Resolver
+85. Private Hosted Zones
+86. Inbound and Outbound Resolver Endpoints
+87. Hybrid DNS Resolution
+88. Elastic Network Interfaces (ENIs)
+89. Multiple Private IP Addresses and Secondary ENIs
+90. Prefix Lists
+91. Dual-Stack IPv4/IPv6 Architecture
+92. IP Address Manager (IPAM)
+Phase 10: AWS Services Inside VPC
+93. EC2 Networking Inside VPC
+94. Lambda VPC Integration
+95. Lambda ENIs and Hyperplane
+96. Lambda in Public vs Private Subnets
+97. Lambda Internet Access Through NAT
+98. Lambda to MongoDB Atlas Connectivity
+99. ECS Fargate Networking
+100. ECS awsvpc Network Mode
+101. EKS VPC CNI Networking
+102. EKS Pod and Service Networking
+103. RDS and Database Subnet Groups
+104. Application Load Balancer in VPC
+105. Network Load Balancer in VPC
+106. Internal vs Internet-Facing Load Balancers
+107. API Gateway Private Integrations and VPC Link
+Phase 11: Monitoring and Troubleshooting
+108. VPC Flow Logs
+109. CloudWatch Logs for Network Troubleshooting
+110. VPC Reachability Analyzer
+111. VPC Network Access Analyzer
+112. Troubleshooting Security Group Rules
+113. Troubleshooting NACL Rules
+114. Troubleshooting Route Tables
+115. Troubleshooting NAT Gateway Connectivity
+116. Troubleshooting DNS Resolution
+117. Troubleshooting VPC Endpoint Connectivity
+118. Diagnosing Lambda Connection Timeouts
+119. Diagnosing Cross-VPC Connectivity
+Phase 12: Security and Enterprise Architecture
+120. Multi-Tier VPC Architecture
+121. Multi-AZ High Availability
+122. Multi-Region Network Architecture
+123. Zero-Trust Networking Principles
+124. Centralized Inspection VPC
+125. Centralized Egress Architecture
+126. AWS Network Firewall Architecture
+127. AWS Organizations and Network Governance
+128. Cross-Account Network Isolation
+129. Production VPC Security Checklist
+Phase 13: VPC Cost Optimization
+130. Understanding VPC Networking Charges
+131. NAT Gateway Hourly and Data Processing Costs
+132. Cross-AZ Data Transfer Costs
+133. Inter-VPC and Cross-Region Transfer Costs
+134. VPC Endpoint Pricing
+135. NAT Gateway vs NAT Instance Cost Analysis
+136. Reducing Data Transfer Costs
+137. Cost-Optimized Serverless Networking
+138. Monitoring VPC Networking Costs
+139. Designing a Cost-Effective Production VPC
+Phase 14: Production Architecture Projects
+140. Project 1 — Build a Custom VPC from Scratch
+141. Project 2 — Public EC2 + Private Database
+142. Project 3 — Three-Tier Architecture with ALB, EC2 and RDS
+143. Project 4 — Private Lambda Connecting to MongoDB Atlas
+144. Project 5 — Multi-AZ Production VPC
+145. Project 6 — Private Lambda Accessing S3 and SQS Without NAT
+146. Project 7 — ECS Fargate with Private Subnets and ALB
+147. Project 8 — EKS Production VPC Networking
+148. Project 9 — Two VPCs Connected Using VPC Peering
+149. Project 10 — Multi-Account Networking with Transit Gateway
+150. Project 11 — Hybrid Networking Using Site-to-Site VPN
+151. Project 12 — Secure Multi-Tenant Network Architecture
+152. Project 13 — Optimize a High-Cost NAT Gateway Architecture
+153. Project 14 — Design a Production VPC for 100,000+ Users
+154. Project 15 — End-to-End Enterprise AWS Network Architecture
